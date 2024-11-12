@@ -1,0 +1,113 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author ........ : Alexandros X. Attikis
+%% Institute ..... : University of Cyprus (UCY)
+%% e-Mail ........ : attikis@cern.ch
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Setup usage of Greek
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[LGRx,T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+%\usepackage[greek,english]{babel} 
+\usepackage[T1]{fontenc}
+\usepackage[greek,english]{babel}
+\usepackage{etoolbox} %for toggles (booleans)
+\usepackage[nolist]{acronym} %disable the creation of an "acronyms list"
+\usepackage{pifont} %ticks and crosses
+\usepackage{calc}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{tabu}
+\usepackage{float}
+\usepackage[countmax]{subfloat}
+% \usepackage{showkeys}  % Modifies the \label,\ref,\pageref, \cite and \bibitem commands so that the `internal' key is printed.
+% \usepackage{showframe} % Showing margins/frames in beamer slides
+\usepackage{lmodern}  %removes restriction on font size by allowing them to have arbitrary sizes.
+\usepackage{fancybox}
+\usepackage{subfig}
+\let\subfigure\subfloat% compatibility between subfigure and subfig packages 
+\usepackage{ifthen}
+\usepackage{xcolor}
+\usepackage{xspace} 
+\usepackage{textcomp} %for degrees symbol 
+\usepackage{gensymb}  %for degrees symbol: gives 2 warnings
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{grffile}  %graphicx package uses the first dot to find the extension. Package grffile changes the algorithm to check for known extensions (option multidot enabled)
+\usepackage[makeroom]{cancel}
+\usepackage{amsmath,amssymb}% for advanced math typesetting % amsmath provides split
+\usepackage{marginnote}
+\usepackage{environ}
+\usepackage{tensor} %for tensor notations 
+\usepackage{slashed} %for Dirac slash notations
+\usepackage{fancyhdr} %enables use of heaters/footers
+\usepackage{cancel}
+\usepackage{makecell}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{alltt}
+\usepackage{amsfonts} % for using number sets (prime, natural etc..) 
+\usepackage{bm}       % defines a command \bm which may be used anywhere in maths mode to make something bold
+\usepackage{verbatim} % enables the \begin{comment}: a multi-line commenting out package
+\usepackage{setspace} % enables me to set the line spacing using \setstretch{}
+\usepackage{multirow} % enables the use of columns spanning multiple rows
+\usepackage{array}    % enables the use of bold text with tabular environment
+\usepackage{bibentry} % for in-line full citations
+\usepackage{lineno}
+\usepackage{marvosym}
+\usepackage{pdfpages}  %to enable the genereation of handouts
+\usepackage{pgfpages}  %to enable notes
+\usepackage{pifont}    % http://ctan.org/pkg/pifont
+\usepackage{nicefrac}  % nice-looking fractions (fit in single-line)
+\usepackage{changepage}
+% \usepackage{lipsum}  % generate random text with \lipsum[2]
+\usepackage{nameref}
+\usepackage{listings}
+\usepackage{adjustbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Other packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{verbatim}
+\usepackage{multirow}
+\usepackage{multicol} %splitting enumerate environment to two columns
+\usepackage{pgfkeys,pgffor}
+\usepackage{graphicx}
+\usepackage{gensymb} %for degrees symbol
+\usepackage{pgf}
+\usepackage{beamerthemesplit}
+\usepackage{latexsym}
+\usepackage{ifsym}
+\usepackage[absolute,overlay]{textpos} %place material at absolute positions on a page
+\usepackage{etex} %must be loaded before tikz, otherwise tikz crashes
+\usepackage{tcolorbox} 
+\usepackage{color, colortbl}
+\usepackage{multimedia} % can be used to show movies (mp4, avi, etc..) with: \movie[options]{}{film.avi}
+\usepackage[ddmmyyyy, dayofweek, 24hr]{datetime} %short, long, text, raise
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TikZ packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usepackage{animate}
+\usepackage{media9}
+\usetikzlibrary{decorations.pathreplacing}
+%\usetikzlibrary{shapes.symbols}
+\usetikzlibrary{shapes}
+\usetikzlibrary{positioning}
+
+
+\usepackage{soul}
+%\usepackage{neuralnetwork}
+%\usepackage{mathtools}
+\usepackage{amsmath}
+
+\usepackage{ulem} % line above letters
+\usepackage{color,soul} % highlight
+
+\usepackage[edges]{forest} % tree diagram
+
+% HEP NAMES
+%\usepackage{heppennames2x}
+\usepackage{xifthen}   % usage: provides \isempty test

@@ -1,0 +1,456 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author ........ : Sotiroulla Konstantinou
+%% Institute ..... : Rutgers University
+%% e-Mail ........ : skonstan@cern.ch
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%https://tex.stackexchange.com/questions/187165/callout-with-multiple-pointers-how-to-design-it/361532
+
+% EXO-21-002
+% Preapproval:       https://indico.cern.ch/event/1032358/contributions/4335231/attachments/2232314/3788782/PreAppMultileptons.pdf
+% Approval:          https://indico.cern.ch/event/1065725/contributions/4481176/attachments/2292883/3898842/ApprovalMultileptons_EXO_21_002.pdf
+% Status and plans:  https://indico.cern.ch/event/922722/contributions/3876670/attachments/2046118/3428112/ExoNH_StatusReport_27May2020.pdf
+% Halil UCY seminar: https://indico.cern.ch/event/1234638/contributions/5195617/attachments/2741289/4768368/HalilSaka_UCYSeminar_2023.pdf
+
+\MySection{Introduction}
+
+\Slide{t}{
+
+  \begin{itemize}
+  \item Color-triplet scalar or vector bosons that directly interact
+    with quarks and leptons and carry fractional electric charge
+    \vspace{0.2cm}
+  \item LQ-like particles present in many BSM models%Motivated by many BSM models
+    \begin{itemize}
+    \item Supersymmetry, Grand Unified Theory, compositeness models
+    \end{itemize}
+  \end{itemize}
+
+
+  \begin{columns}[T]
+    \begin{column}{0.01\textwidth}\end{column}
+    \begin{column}{0.42\textwidth}
+      \begin{itemize}
+      \item Model parameters
+        \begin{itemize}
+        \item LQ mass: $M_{LQ}$
+        \item Yukawa coupling: $\lambda$
+        \item k parameter (vector LQ): %related to anomalous magnetic and electric quadrupole moments
+          %\begin{itemize}
+          %\item k = 1: ``Yang-Mills'' case
+          %\item k = 0: ``minimal coupling'' case
+          %\end{itemize}
+        \end{itemize}
+      \end{itemize}
+
+      \vspace{0.15cm}
+      
+      \begin{itemize}
+      \item This analysis: Scalar LQ coupling to t-quarks%$\rightarrow$ $t\ell^{\pm}$
+      \end{itemize}
+
+      \vspace{-0.75cm}
+      \oneFigColumns{CMS-EXO-21-002_Figure_003-a.pdf}{}{0.75}
+      
+    \end{column}
+    \begin{column}{0.57\textwidth}
+      \vspace{-0.30cm}
+      \oneFigColumns{LQmodelTable_v2.pdf}{}{1.0}
+    \end{column}
+  \end{columns}  
+}
+
+\Slide{t}{
+
+  \vspace{0.1cm}
+  
+  \textbf{Strong pair production is the dominant mechanism in the region of low $\lambda$}
+
+  \vspace{-0.25cm}
+  
+  \twoColumns
+      {
+        \oneFigColumns{f1.png}{}{0.69}
+      }
+      {
+        \vspace{-0.3cm}
+        \oneFigColumns{totalXSec.pdf}{}{0.79}
+      }
+
+      \vspace{-0.45cm}
+      \textbf{Latest CMS and ATLAS results}
+      \begin{columns}[T]
+        \begin{column}{0.70\textwidth}
+          \begin{table}[]
+            \resizebox{0.89\linewidth}{!}{
+              \begin{tabular}{lll}
+                \hline
+                & Channel & Upper limit (GeV)\\
+                \hline
+                ATLAS \href{https://arxiv.org/abs/2306.17642}{\scriptsize{arxiv.2306.17642}} & $te~te$/$t\mu~t\mu$ & 1580/1590\\
+                ATLAS \href{https://link.springer.com/article/10.1007/JHEP06(2021)179}{\scriptsize{JHEP06 (2021) 179}} & $t\tau~t\tau$ & 1430\\
+                ATLAS \href{https://link.springer.com/article/10.1007/JHEP06(2023)188}{\scriptsize{JHEP06 (2023) 188}} & $t\nu~ b\mu$/$t\nu~be$ & 1460/1440\\
+                ATLAS \href{https://link.springer.com/article/10.1007/JHEP06(2023)188}{\scriptsize{JHEP06 (2023) 188}} & $t\mu~b\nu$/$te~b\nu$ & 1370/1390\\
+                CMS   \href{https://www.sciencedirect.com/science/article/pii/S0370269321003865?via\%3Dihub}{\scriptsize{PLB 819 (2021) 136446}} & $t \tau \nu (b)$ & 980\\
+                CMS \href{https://journals.aps.org/prd/abstract/10.1103/PhysRevD.105.112007}{\scriptsize{PRD 105 (2022) 112007} } & $te~te$/$t\mu~t\mu$/$t\tau~t\tau$ & 1340/1420/1120\\
+                \hline
+            \end{tabular}}
+          \end{table}
+        \end{column}
+        \begin{column}{0.30\textwidth}\end{column}
+      \end{columns}
+}
+
+
+\MySection{What did we learn from multilepton analysis?}
+\Slide{t}{
+
+  \begin{itemize}
+    \small
+  \item 3$\ell$, 4$\ell$ events: 7 channels based on the number of light $\ell$, $\tau_{h}$
+  \item 204 Model-independent categories:
+    \begin{itemize}
+      \small
+    \item OSSFn, $M_{\ell\ell}$, $M_{T}$, min $p_{T,\ell}$, $N_{b}$, \HT, $p_{T}^{miss}$
+    \end{itemize}
+  \end{itemize}
+  \vspace{-0.17cm}
+  \oneFigColumns{CMS-EXO-21-002_Figure_010-b.pdf}{\textcolor{kRed}{PRD 105 (2022) 112007}\vspace{-0.17cm}}{0.8}
+
+  \twoColumns
+      {
+        \vspace{0.25cm}
+        \begin{itemize}
+          \normalsize
+        \item Inclusive multilepton analysis
+          \begin{itemize}
+            \normalsize
+          %\item Uses standard objects ($\ell$, jets)
+          \item Not designed for high-\pT objects
+          \item In heavy $M_{LQ}$ regime we can extend the search by consiring hadronic top decays ($\mathcal{B}\sim$67\%)
+          \end{itemize}
+        \end{itemize}
+      }
+      {
+        \vspace{0.25cm}
+        \begin{itemize}
+          \normalsize
+        \item LQ signal sensitivity in regions with:
+          \begin{itemize}
+            \normalsize
+          \item High $p_{T,\ell}$/\MT,
+          \item $M_{OSSF}$ OffZ
+          \item $N_{b}$~>~0
+          \item large \ST
+          \end{itemize}
+        \end{itemize}        
+        %\vspace{-0.37cm}
+        %\oneFigColumns{CMS-EXO-21-002_Figure_003-a.pdf}{}{0.64}
+      }
+}
+
+
+\MySection{What's new?}
+\Slide{t}{
+
+  \vspace{0.2cm}
+  
+  \begin{itemize}
+  \item This analysis targers Run 2, Run 3 Data
+  \item $t\ell~t\ell$ and $t\ell~b\nu$ decays (Mixed lepton flavor couplings)
+    \vspace{0.2cm}
+  \item Explore signal in categories with merged top- and W-tagged jets
+    \begin{itemize}
+    \item Utilize AK8 jets and flavor identification (ParticleNet)
+    \item Categorization based on number of t-jets (T), W-jets (W), leptons
+    \end{itemize}
+  \end{itemize}
+
+  \vspace{0.5cm}
+
+  \textbf{Primary datasets:}
+  \begin{itemize}
+    \small
+  \item Run 2: SingleMuon, SingleElectron/EGamma
+  \item Run 3: Muon, EGamma
+  \end{itemize}
+
+  \vspace{0.2cm}  
+  \textbf{Trigger:}
+  \begin{itemize}
+  \item Single isolated $\ell$, high-\pT $\ell$
+  \item AK8 Jets, HT
+  \end{itemize}
+}
+
+\MySection{This talk}
+\MySubSection{\textcolor{kRed}{Preliminary studies 2018}}
+\Slide{t}{
+
+  \textbf{This talk presents a study using 2018 data}
+
+  \begin{itemize}
+    \small
+    \CustomiseLineSpacing{1.08}
+  %\item Trigger: \textcolor{red}{Single isolated $\ell$, high-\pT $\ell$}
+  \item Background: tt, VV, ttZ, ttW
+  \item Signal (private production)
+    \begin{itemize}
+      \small
+    %\item Scalar S1
+    \item S1 pair production: $t\tau~t\tau$, $t\tau~b\nu$%TLTL, TLQ5L
+    \item Signal normalized to 1~pb
+    \item $M_{LQ}$~=~1\TeV, $\lambda$~=~0.01
+    \end{itemize}
+  \end{itemize}  
+
+  \vspace{0.1cm}
+  
+  \textbf{Object selection}
+
+  \vspace{0.1cm}
+
+  \begin{itemize}
+    \small
+    \CustomiseLineSpacing{1.08}
+  \item Trigger: \textcolor{black}{Single isolated $\ell$, high-\pT $\ell$}
+    \vspace{0.05cm}
+  \item Electrons, Muons
+    \begin{itemize}
+      \small
+    \item $|\eta|$~<~2.4, \pT~>~10~GeV
+    \item cutBasedID (medium), pfRelIso (tight), low jetPtRatio
+    \item Displacement: sip3D, |dxy|, |dz|, JetDeepFlavorB
+    \end{itemize}
+    \vspace{0.05cm}
+  %\item Electrons
+  %  \begin{itemize}
+  %    \small
+  %  \item $|\eta|$~<~2.4, \pT~>~10~GeV
+  %  \item cutBasedID (medium), pfRelIso (tight), low jetPtRatio
+  %  \item Displacement: sip3D, |dxy|, |dz|, JetDeepFlavorB
+  %  \end{itemize}
+  %  \vspace{0.1cm}
+  \item AK4 jets
+    \begin{itemize}
+      \small
+    \item $|\eta|$~<~2.4, \pT~>~30~GeV
+    \item ID tight \& tightLepVeto, PUID tight
+    \item b-tag: DeepJet medium WP
+    %\item $\Delta R(jet, \ell)$~>~0.4
+    \end{itemize}
+    \vspace{0.05cm}
+  \item AK8 jets
+    \begin{itemize}
+      \small
+    \item $|\eta|$~<~2.4, \pT~>~200~GeV, ID tight
+    \item ParticleNet TvsQCD, WvsQCD for top and W tagging
+    \end{itemize}
+  \end{itemize}
+
+}
+
+\MySection{Preliminary studies 2018}
+%
+\Slide{t}{
+
+  \twoColumns
+      {
+        \normalsize
+        \textbf{$ \ $ Preselections}
+
+        \vspace{0.1cm}
+
+        \begin{itemize}
+          \small
+        \item Number of light leptons ($e,~\mu$): $N_{\ell}$ > 1
+        \item $M_{OSSF}~>$ 106~\GeV (Above Z mass)
+        \item Number of jets: $N_{j}$ > 1, $N_{b}$ > 0
+        \end{itemize}
+      }
+      {
+        \oneFigColumns{CMS-EXO-21-002_Figure_003-a.pdf}{\textbf{}\vspace{-0.5cm}}{0.7}
+      }
+
+      \vspace{0.25cm}
+
+      \begin{columns}[T]
+        \begin{column}{0.28\textwidth}
+          \oneFigRUStyle{runPlotter_categories_2018_LS0_GT1L_02Aug2024.pdf}{1.55}{1}
+        \end{column}
+        \begin{column}{0.28\textwidth}
+          \oneFigRUStyle{runPlotter_categories_2018_LS0_GT1L_02Aug2024.pdf}{1.55}{17}
+        \end{column}
+        \begin{column}{0.44\textwidth}
+          \oneFigRUStyle{runPlotter_categories_2018_LS0_GT1L_02Aug2024.pdf}{1.0}{18}
+        \end{column}
+      \end{columns}
+     \vspace{0.2cm}
+     \begin{itemize}
+     \item Signal sensitivity improves in categories with $N_{\ell}$ > 2, $N_{T/W}$ $\ge$ 1
+     \end{itemize}
+}
+
+\Slide{t}{
+
+  \vspace{-0.2cm}
+  
+  \begin{columns}[T]
+    \begin{column}{0.28\textwidth}
+      \oneFigRUTitle{runPlotter_categories_2018_LS0_2L_02Aug2024.pdf}{1.53}{18}{$N_{\ell}$ = 2}
+    \end{column}
+    \begin{column}{0.28\textwidth}
+      \oneFigRUTitle{runPlotter_categories_2018_LS0_2L_02Aug2024.pdf}{1.53}{11}{$N_{\ell}$ = 2}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \oneFigRUTitle{runPlotter_categories_2018_LS0_2LAK8_02Aug2024.pdf}{1.0}{11}{$N_{\ell}$ = 2 + $\ge$ 1 t/W Jet}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.3cm}
+  
+  \begin{columns}[T]
+    \begin{column}{0.28\textwidth}
+      \oneFigRUTitle{runPlotter_categories_2018_LS0_3L_02Aug2024.pdf}{1.53}{17}{$N_{\ell}~\ge$ 3}
+    \end{column}
+    \begin{column}{0.28\textwidth}
+      \oneFigRUTitle{runPlotter_categories_2018_LS0_3L_02Aug2024.pdf}{1.53}{11}{$N_{\ell}~\ge$ 3}
+    \end{column}
+    \begin{column}{0.44\textwidth}
+      \oneFigRUTitle{runPlotter_categories_2018_LS0_3L1AK8_02Aug2024.pdf}{1.0}{11}{$N_{\ell}~\ge$ 3 + $\ge$ 1 t/W jet}
+    \end{column}
+  \end{columns}
+
+}
+
+\MySubSection{\textcolor{kRed}{Expected limits}}
+\Slide{t}{
+
+  $ \ $ We extract expected limits using \ST fit discriminant
+
+\vspace{0.2cm}
+  
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{ c c c c c c }
+\hline
+Category & \multicolumn{5}{ c }{Expected limit} \\ \cline{2-6}
+    & $-2\sigma$  & $-1\sigma$ & median & +1$\sigma$ & +2$\sigma$ \\
+\hline
+2$\ell$, 0 t/W jet & 17.4648 & 23.3640 & \textcolor{kRed}{32.8750} & 46.5033 & 63.0022\\
+2$\ell$, 1 t/W jet & 5.5947 & 7.4845 & \textcolor{kRed}{10.5312} & 14.8550 & 20.0191\\
+2$\ell$, 2 t/W jet & 4.3934 & 6.0154 & \textcolor{kRed}{8.7188} & 12.7154 & 17.7276\\
+Combined 2$\ell$   & 3.3369 & 4.4999 & \textcolor{kRed}{6.3750} & 9.1194 & 12.4478\\
+3$\ell$            & 2.4824 & 3.4527 & \textcolor{kRed}{5.1250} & 7.7603 & 11.2750\\
+\hline
+Combined 2$\ell$, 3$\ell$ & 1.9290 & 2.6412 & \textcolor{kRed}{\textbf{3.8281}} & 5.5829 & 7.8073\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+  
+}
+
+\iffalse
+\MySection{LQ in boosted-jet topologies}
+\Slide{t}{
+
+  Explore signal in categories with merged top- and W-tagged jets
+  \begin{itemize}
+    \small
+  \item AK8 jets
+    %\begin{itemize}
+    %  \small
+  \item[] \textcolor{oxfordblue}{$\blacktriangleright$} $|\eta|$~<~2.4, \pT~>~200~GeV, ID tight
+  \item[] \textcolor{oxfordblue}{$\blacktriangleright$} t-tag:
+    \pT> 400 GeV, pnTvsQCD (loose, 1\% mistag)
+  \item[] \textcolor{oxfordblue}{$\blacktriangleright$} W-tag:
+    \pT> 200 GeV, pnWvsQCD (loose, 2.5\% mistag), NOT t-tagged
+    %\end{itemize}
+  \end{itemize}
+
+  \vspace{0.3cm}
+  
+  \twoColumns
+      {
+        {\oneFigRUStyle{phil/runPlotter_categories_2018_Nll3_limit.pdf}{1.1}{17}}
+      }
+      {
+        {\oneFigRUStyle{phil/runPlotter_categories_2018_Nll3_limit.pdf}{1.1}{18}}
+      }  
+      
+}
+\fi
+
+\MySubSection{\textcolor{kRed}{Categorization}}
+\Slide{t}{
+
+  \textbf{$ \ $ Categorization based on}
+  \begin{itemize}
+  \item Number of merged top- and W- tagged jets (T, W)
+  \item Number of light leptons ($\ell$)
+  \end{itemize}
+  
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}  
+      \oneFigColumns{table_cate_v2.png}{}{1.0}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \oneFigColumns{CMS-EXO-21-002_Figure_003-a.pdf}{}{0.9}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.2cm}
+  
+  \textbf{$ \ $ Event selections}
+  
+  \begin{itemize}
+  \item $N_{t-jet}$ = 0: OSSF Above Z, $N_{j}$ > 1, $N_{b}$ > 0
+  \item $N_{t-jet}$ > 0: OSSF Above Z
+  \end{itemize}
+}
+
+
+\MySubSection{\textcolor{kRed}{Expected yields}}
+\Slide{t}{
+
+  \oneFigColumns{yieldsNew.png}{}{0.9}
+  
+}
+
+\MySection{Plan for signal MC central production}
+\Slide{t}{
+
+  \vspace{0.5cm}
+  \begin{itemize}
+  \item Run 2, Run 3
+  \item $M_{LQ}$ = 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2.0, 2.2, 2.4, 2.6, 2.8, 3 \TeV
+  \item Two final states: $t\ell t\ell$, $t\ell b\nu$
+  \item All lepton flavors
+  \item $\sim$25k events per $M_{LQ}$, FS, lepton flavor and era
+  \end{itemize}  
+}
+
+\MySection{Summary}
+\Slide{t}{
+  
+  First results in pair production of LQ coupling to t-quarks
+  $t\tau b\nu$
+
+  \begin{itemize}
+  \item $t\ell~t\ell$ and $t\ell~b\nu$ decays
+  \item Mixed lepton flavor couplings
+  \item Topologies with resolved, (semi-) boosted tops (ParticleNet)
+  \item Categorization based on number of t-jets (T), W-jets (W), leptons
+  \end{itemize}
+  
+  \vspace{0.4cm}
+  Next steps
+  \begin{itemize}
+  \item Submit MC request
+  \item Study full Run 2 and Run 3 data
+  \item Optimize objects and event selections
+  \item Utilize hadronic tau leptons
+  \item Data in CRs
+  %\item Background estimation
+  \end{itemize}
+}

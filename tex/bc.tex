@@ -1,0 +1,1603 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% File .......... : BeamerCommands.tex
+%% Author ........ : Alexandros X. Attikis
+%% Institute ..... : University of Cyprus (UCY)
+%% e-Mail ........ : attikis@cern.ch
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\en}{\selectlanguage{english}}
+\newcommand{\gr}{\selectlanguage{greek}}
+
+\newcommand\PlaceText[3]{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[outer sep=0pt,inner sep=0pt,anchor=south west] 
+  at ([xshift=#1,yshift=-#2]current page.north west) {#3};
+\end{tikzpicture}%
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Colour definition (http://en.wikipedia.org/wiki/Web_colors)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{kWhite}         {RGB}{255, 255, 255}
+\definecolor{kSnow}          {RGB}{250, 250, 250}
+\definecolor{kBlack}         {RGB}{  0,   0,   0}
+\definecolor{kPink}          {RGB}{227,  74, 147}
+\definecolor{kGray}          {RGB}{192, 192, 192}
+\definecolor{kNavyBlue}      {RGB}{28 , 130, 185}
+\definecolor{kDarkBlue}      {RGB}{  0,   0, 214}
+\definecolor{kLightBlue}     {RGB}{  0,  61, 245}
+\definecolor{kvLightBlue}    {RGB}{  0, 184, 245}
+\definecolor{kMyBlue}        {RGB}{ 51, 102, 255}
+\definecolor{kBlue}          {RGB}{ 51, 102, 255}
+
+\definecolor{kGreen}         {RGB}{ 98, 158,  31}
+\definecolor{kDarkGreen}     {RGB}{ 50, 133,   0}
+\definecolor{kRed}           {RGB}{220,   0,   0}
+\definecolor{kOrange}        {RGB}{230, 120,  20}
+\definecolor{kYellow}        {RGB}{255, 221,   0}
+\definecolor{kBlue}          {RGB}{ 10,  50, 150}
+\definecolor{kBrown}         {RGB}{120,  89,  30}
+\definecolor{kPink}          {RGB}{255,  0 , 128}
+\definecolor{kPurple}        {RGB}{148,  0 , 211}
+\definecolor{kMagenta}       {RGB}{255,  0 , 255}
+\definecolor{kHLTausBlue}    {RGB}{ 11,  36, 251} % 0B24FB
+\definecolor{kHLTausGreen}   {RGB}{223, 254, 191} % DFFEBF
+\definecolor{kHLTausOrange}  {RGB}{255, 166,  77} % FFA64D
+\definecolor{kHLTausRed}     {RGB}{255,  51,  34} % FF3322
+\definecolor{kHPlusBlue}     {RGB}{ 11,  36, 251}
+\definecolor{kHPlusLightBlue}{RGB}{136, 210, 249}
+\definecolor{kHPlusYellow}   {RGB}{254, 222, 134}
+\definecolor{kHPlusBlack}    {RGB}{  6,   6,   7}
+\definecolor{kHPlusWhite}    {RGB}{255, 255, 255}
+\definecolor{kHPlusDarkBlue} {RGB}{ 15,  54, 148}
+%
+\definecolor{kPSModules}     {RGB}{  7,  71, 132}
+\definecolor{k2SModules}     {RGB}{252,  68,  35}
+\definecolor{kPixels}        {RGB}{ 74,  35, 109}
+\definecolor{kTRACKER}{RGB}{124, 181, 204}
+\definecolor{kECAL}{RGB}{98, 189, 156}
+\definecolor{kHCAL}{RGB}{244, 239, 146}
+\definecolor{kMAGNET}{RGB}{255, 255, 255}
+\definecolor{kYOKE}{RGB}{176, 45, 44}
+\definecolor{kMUON}{RGB}{190, 190, 190}
+\definecolor{kBASELINE}{RGB}{ 11,  36, 251}
+\definecolor{kINVERTED}{RGB}{255,  51,  34}
+\definecolor{QCD}{RGB}{254, 203, 69}
+\definecolor{TT}{RGB}{11, 35, 243}
+\definecolor{DYJetsToQQHT}{RGB}{157, 254, 205}
+\definecolor{TTWJetsToQQ}{RGB}{154, 202, 39}
+\definecolor{WJetsToQQHT}{RGB}{202, 52, 21}
+\definecolor{SingleTop}{RGB}{31, 202, 62}
+\definecolor{Diboson}{RGB}{54, 63, 251}
+\definecolor{TTZToQQ}{RGB}{105, 155, 252}
+\definecolor{TTTT}{RGB}{255, 254, 159}
+\definecolor{kPostitYellow}{RGB}{242,226,149}
+
+%==============================================
+% Soti's colors
+%==============================================
+
+\definecolor{indianred}{rgb}{0.85, 0.4, 0.4} %0.8, 0.36, 0.36
+\definecolor{lightsalmonpink}{rgb}{1.0, 0.6, 0.6}
+\definecolor{apricot}{rgb}{0.98, 0.81, 0.69}
+\definecolor{floralwhite}{rgb}{1.35, 0.9, 0.9} %1.0, 0.98, 0.94
+\definecolor{darkgray}{rgb}{0.43, 0.5, 0.5}
+\definecolor{oxfordblue}{rgb}{0.0, 0.13, 0.28}
+\definecolor{wildblueyonder}{rgb}{0.64, 0.68, 0.82}
+\definecolor{deepjunglegreen}{rgb}{0.0, 0.29, 0.29}
+\definecolor{aliceblue}{rgb}{0.94, 0.97, 1.0}
+\definecolor{beaublue}{rgb}{0.74, 0.83, 0.9}
+
+
+\newcommand{\TRACKER}[1]{\TextColour{kTRACKER}{#1}}
+\newcommand{\ECAL}[1]{\TextColour{kECAL}{#1}}
+\newcommand{\HCAL}[1]{\TextColour{kHCAL}{#1}}
+\newcommand{\MAGNET}[1]{\TextColour{kMAGNET}{#1}}
+\newcommand{\YOKE}[1]{\TextColour{kYOKE}{#1}}
+\newcommand{\MUON}[1]{\TextColour{kMUON}{#1}}
+\newcommand{\BASELINE}[1]{\TextColour{kBASELINE}{#1}}
+\newcommand{\INVERTED}[1]{\TextColour{kINVERTED}{#1}}
+\newcommand{\cTT}[1]{\TextColour{TT}{#1}}
+\newcommand{\cDYJetsToQQHT}[1]{\TextColour{DYJetsToQQHT}{#1}}
+\newcommand{\cTTWJetsToQQ}[1]{\TextColour{TTWJetsToQQ}{#1}}
+\newcommand{\cWJetsToQQHT}[1]{\TextColour{WJetsToQQHT}{#1}}
+\newcommand{\cSingleTop}[1]{\TextColour{SingleTop}{#1}}
+\newcommand{\cDiboson}[1]{\TextColour{Diboson}{#1}}
+\newcommand{\cTTZToQQ}[1]{\TextColour{TTZToQQ}{#1}}
+\newcommand{\cTTTT}[1]{\TextColour{TTTT}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Analysis-specific commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\hCMSSW}[1]{\MyHRef{http://cmsdoxygen.web.cern.ch/cmsdoxygen/}{CMSSW\_#1}}
+\newcommand{\PPCollisionsThirteenTeV}{\MyHRef{https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults\#2016\_Proton\_Proton\_13\_TeV\_Collis}{2016 Proton-Proton 13 \TeV Collisions}\xspace}
+\newcommand{\ReMiniAOD}{\MyHRef{https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD\#2016\_Data\_for\_Moriond\_2017}{}\xspace}
+\newcommand{\FebReMiniAOD}{\MyHRef{https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD\#2016_Data_for_Moriond_2017}{03Feb2017 Re-miniAOD}\xspace}
+\newcommand{\AprilReReco}{\MyHRef{https://hypernews.cern.ch/HyperNews/CMS/get/offline-dqm/671/1/1/1/1.html}{18Apr2017 ReReco}\xspace}
+\newcommand{\AugReReco}{\MyHRef{https://hypernews.cern.ch/HyperNews/CMS/get/dataopsrequests/19907.html}{07Aug2017 Legacy ReReco}\xspace}
+\newcommand{\MoriondTwentySeventeen}{\MyHRef{https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD\#Run2\_Moriond17\_re\_digi\_reco\_camp}{Moriond17 MC}\xspace}
+\newcommand{\SiStripHitEffLoss}{\MyHRef{https://twiki.cern.ch/twiki/bin/view/CMS/SiStripHitEffLoss}{SiStripHitEffLoss}}
+\newcommand{\DASQueryForJetHT}{\MyHRef{https://cmsweb.cern.ch/das/request?view=list\&limit=50\&instance=prod\%2Fglobal\&input=dataset\%3D\%2FJetHT\%2FRun2016*-03Feb2017*-v*\%2FMINIAOD}{dataset=/JetHT/Run2016*-03Feb2017*-v*/MINIAOD}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to place images behind text !!! (z-order)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (http://tex.stackexchange.com/a/134311)
+\makeatletter
+\newbox\@backgroundblock
+\newenvironment{backgroundblock}[2]{%
+  \global\setbox\@backgroundblock=\vbox\bgroup%
+    \unvbox\@backgroundblock%
+    \vbox to0pt\bgroup\vskip#2\hbox to0pt\bgroup\hskip#1\relax%
+}{\egroup\egroup\egroup}
+\addtobeamertemplate{background}{\box\@backgroundblock}{}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Customise tcolorboxes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tcbset{
+    noparskip,
+    coltitle  = green,
+    colframe  = pink!10,
+    colback   = orange!30,
+    coltext   = black,
+    fonttitle = \footnotesize,
+    figureStyle/.style      = { coltitle=\MyMainTextColour, colframe=white, colback=white, coltext=white},
+    transparentStyle/.style = { standard jigsaw, opacityframe=0.0, opacityback=0.0},
+    alertStyle/.style       = { coltitle=\MyMainTextColour, colframe=gray!40, colback=gray!40},
+    animationStyle/.style   = { coltitle=\MyMainTextColour, colframe=white, colback=white, coltext=white},
+    boxsep      = -0.00cm,
+    top         = +0.00cm,
+    bottom      = +0.00cm,
+    left        = +0.00cm,
+    right       = +0.00cm,
+    toptitle    = +0.00cm,
+    bottomtitle = +0.00cm,
+    nobeforeafter,
+    center title,
+    arc=0cm, % 0cm for non-rounded corners!
+}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Theme Customisations (http://en.wikibooks.org/wiki/LaTeX/Presentations)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\CustomiseColours}[6]{
+  \newcommand{\MyMainColour}{#1}
+  \newcommand{\MySectionColour}{#2}
+  \newcommand{\MySubsectionColour}{#3}
+  \newcommand{\MyMainTextColour}{#4}
+  \newcommand{\MySectionTextColour}{#5}
+  \newcommand{\MySubsectionTextColour}{#6}
+}
+
+%%% Title & Section colours
+\setbeamercolor{title}{fg=\MyMainTextColour, bg=\MyMainColour}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=\MyMainTextColour}
+%\setbeamercolor{section in head/foot}{fg=\MySectionTextColour,
+%bg=\MySectionColour}
+\setbeamercolor{section in head/foot}{fg=\MySectionTextColour, bg=white}
+\setbeamercolor{subsection in head/foot}{fg=\MySubsectionTextColour,bg=\MySubsectionColour}
+%\setbeamercolor{subsection in head/foot}{fg=white, bg=white}
+
+\newcommand\textbox[1]{\parbox{.32\textwidth}{#1}}
+
+%%% Customise text margins
+\newcommand{\CustomiseTextMargins}[2]{%
+  \setbeamersize{text margin left=#1}
+  \setbeamersize{text margin right=#2}
+}
+
+%%% Customise tables: width of rule
+\newcommand{\CustomiseTables}[1]{ \setlength{\arrayrulewidth}{#1}}
+
+%%% Customise text format. 10/5/1999 or 10.5.1999 or what?
+\newcommand{\CustomiseDateFormat}[1]{\renewcommand{\dateseparator}{#1}}
+
+%%% Customise line spacing (global)
+\newcommand{\CustomiseLineSpacing}[1]{\setstretch{#1}}
+
+%%% Make title page
+\newcommand{\MakeTitlePage}[5]{%
+  \title{\MyTitle}
+  \subtitle{\MySubtitle}
+  \author{\MyAuthors}
+  \institute{\MyInstitutes}
+  \date{\MyDate}
+  \maketitle
+}
+  
+%%% Customise Talk Theme (https://en.wikibooks.org/wiki/LaTeX/Presentations)
+\newcommand{\CustomiseTheme}[7]{
+  \setbeamertemplate{blocks}[rounded][shadow=false] 
+  \setbeamercolor{uppercol}{fg=white, bg=\MySectionColour}
+  \setbeamercolor{lowercol}{fg=red, bg=orange}
+  \setbeamercolor{block title}{fg=white, bg=kGreen}	
+  \setbeamercolor{block body}{fg=black, bg=kGreen!20}
+  \setbeamercolor{block title alerted}{fg=white, bg=kOrange}
+  \setbeamercolor{block body alerted}{fg=black, bg=kOrange!20}
+  \setbeamercolor{itemize item}{fg=\MySectionColour} % bullet colour  
+  %%% Navigation Bar
+  \ifbool{Navigation}{%
+    \setbeamercolor{navigation symbols}{fg=\MySubsectionColour, bg=\MySubsectionColour}%
+  }{% Remove navigation symbols
+    \setbeamertemplate{navigation symbols}{}
+  }
+  \mode<presentation>  
+  %%% Theme options
+  \usetheme[#1]{#2} % #1= Options, #2 = Theme (Dresden, Madrid, Frankfurt, ...) Not all options are supported by all themes
+  \useoutertheme{split}
+  \usecolortheme[named=\MySectionColour]{structure}
+  \useinnertheme{rounded}             % Usecase: customise enumerate numbering icon (rectangles, circles, inmargin, rounded)
+  \setbeamercovered{transparent}      % Usecase: enables transparent overlays
+  %%% Colour palettes
+  \setbeamercolor{palette primary}{fg=red, bg=orange}
+  \setbeamercolor{palette secondary}{fg=white, bg=\MySectionColour}
+  \setbeamercolor{palette tertiary}{fg=\MySectionTextColour, bg=\MyMainColour}
+  \setbeamercolor{palette quaternary}{fg=red, bg=orange}
+  \setbeamercolor{button}{bg=\MySectionColour,fg=white}
+  \setbeamertemplate{itemize items}[#3]  % Examples: default, triangle, circle, square, ball, $\int$, \tikz\node[cross out, draw] {good} 
+  \newcommand{\LeftSkip}{0.2cm}          % Default: 0.2cm
+  \newcommand{\RightSkip}{0.2cm}         % Default: 0.2cm
+  %%% Header/Footer
+  \ifbool{SubsectionBullets}{%
+    \setbeamertemplate{headline}{%
+      \begin{beamercolorbox}[ht=2.5ex,dp=3.75ex]{section in head/foot}
+        \insertnavigation{\paperwidth}
+      \end{beamercolorbox}%
+      % Comment 3 lines below to disable sub-section title bar in header
+      \begin{beamercolorbox}[ht=2.2ex,dp=1.0ex, leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+        \usebeamerfont{subsection in head/foot} \insertsubsectionhead
+      \end{beamercolorbox}%
+    }%
+  }{% See https://tex.stackexchange.com/questions/243954/modify-main-slide-dimensions-beamer
+    \setbeamertemplate{headline}{%
+      \setbeamerfont*{section in head/foot}{size=\normalsize}
+      \begin{beamercolorbox}[ht=0.8cm, wd=1.0\paperwidth, dp=\FooterBoxDepth,leftskip=\LeftSkip, rightskip=\RightSkip]{section in head/foot}
+        \usebeamerfont{section in head/foot}
+        %\Large{\textbf{\insertsectionhead}}
+        %\large{\textcolor{\MySubsectionColour}{\insertsubsectionhead}}
+        \vspace{-0.8cm}
+        \tikz{ \Large \overlaynode<\MySubsectionColour,{\MyMainTextColour,xshift=1}>{{\textbf{\insertsectionhead}}};}
+        %  %\overlaynode<\MySubsectionColour,{\MySubsectionColour,xshift=0}>at(1,0){\insertsubsectionhead};
+        %\tikz[baseline]{
+          %\node[anchor=text,label={[font=\footnotesize]right:Verb}]{constitutes};          
+        %}
+
+        \PlaceText{115mm}{9mm}{\small
+          \tikz{\overlaynode<\MySubsectionColour,{\MyMainTextColour,xshift=1}>{{\hfil\insertframenumber/\inserttotalframenumber\hfil}};}}
+          %\tikz{\overlaynode<\MySubsectionColour,{\MyMainTextColour,scale=1.1}>[circle]at(5,0)[draw]{\hfil\insertframenumber/\inserttotalframenumber\hfil};}}
+      \end{beamercolorbox}%
+    }
+  }
+  %%% Footer
+  \ifbool{Footer}{
+    \newcommand{\HeaderHeight}{0.45cm}  % default: 0.4cm
+    \newcommand{\FooterHeight}{0.20cm}  % default: 0.2cm
+    \newcommand{\FooterBoxDepth}{0.1cm} % default: 0.1cm (the distance between the baseline and the bottom of the box)
+    \setbeamertemplate{footline}{%
+      \leavevmode
+      \hbox{%
+        \fontsize{11}{13}\selectfont%
+        \begin{beamercolorbox}[wd=1.0\paperwidth, ht=\FooterHeight, dp=\FooterBoxDepth, leftskip=\LeftSkip, rightskip=\RightSkip]{title in head/foot}
+          \scriptsize % soti \noindent\textbox{#4\hfill}\textbox{\hfil\insertframenumber\ of \inserttotalframenumber\hfil}\textbox{\hfill #5}
+          % Place navigation bar in footer?
+          % \footnotesize \noindent\textbox{#1\hfill}\textbox{\hfil\insertframenumber\ of \inserttotalframenumber\hfil}\textbox{\hfill 
+          %   \insertslidenavigationsymbol
+          %   \insertframenavigationsymbol%
+          %   \insertsectionnavigationsymbol%
+          %   \insertsubsectionnavigationsymbol%
+          %   \insertsectionnavigationsymbol%
+          %   \insertdocnavigationsymbol%
+          %   \insertbackfindforwardnavigationsymbol%
+        \end{beamercolorbox}%   
+      }
+    }
+  }{%
+    \setbeamertemplate{footline}{}
+  }
+  %%% Title page
+  % \usefonttheme{structurebold} #no idea what this does
+  \setbeamerfont{title}{size=\large,series=\bfseries,parent=structure}
+  \setbeamerfont{subtitle}{size=\normalsize,series=\normalfont,parent=structure}
+  \setbeamerfont{author}{size=\normalsize,parent=structure}
+  \setbeamerfont{institute}{size=\scriptsize,parent=structure}
+  \setbeamerfont{date}{size=\normalsize,parent=structure}
+  \setbeamertemplate{title page}[default][rounded=false,center,colsep=0.2cm]
+  %%% Notes (Use notes in  slides with: \note{this is a note}
+  \ifbool{Notes}{\setbeameroption{show notes on second screen}}{}
+  %%% Set a gradient background colour for all slides?
+  \ifbool{GradientBackground}{\beamertemplateshadingbackground{#6}{#7}}{}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Overlays
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \newcommand{\OverlayFrame}[3]{
+  \only<#2>{
+    \begin{tikzpicture}[remember picture,overlay]%
+      \draw[fill= #3] % e.g. black, opacity=0.8 
+      (current page.north east) rectangle (current page.south west);
+      \node at (current page.center) {
+          \begin{minipage}{1.0\linewidth}  
+	    #1	
+          \end{minipage}
+      };
+    \end{tikzpicture}
+    \normalsize
+  }
+}
+  
+\newcommand{\MessageFrame}[3]{
+  \only<#1>{
+    \begin{tikzpicture}[remember picture,overlay]%
+      \draw[fill=black,opacity=0.80] 
+      (current page.north east) rectangle (current page.south west);
+      \node at (current page.center) {
+        %%% What to do
+          \begin{minipage}{0.8\linewidth}  
+            \begin{block}{\Huge\centering\SpecialColour{#2}}
+              \Large #3
+            \end{block}
+          \end{minipage}
+      };
+    \end{tikzpicture}
+    \normalsize
+  }
+}
+
+\newcommand{\OverlayRectangle}[7]{
+  #1{
+    \begin{tikzpicture}[remember picture,overlay]
+      \draw[fill=#3,opacity=#2](#4,#5) rectangle (#6,#7);
+    \end{tikzpicture}
+    \normalsize
+  }
+}
+
+%%% Reveal the TikZ grid of the slide
+\newcommand{\RevealTikzGrid}{
+    \begin{tikzpicture}
+
+      \foreach \i [evaluate=\i] in {0,1,2,...,11} {
+        \draw(0,0) rectangle (\i,\i);
+        \foreach \j [evaluate=\i] in {0,1,2,...,12} {
+          \draw(\j,\j) rectangle (\i,\i);
+        }
+      }
+    \end{tikzpicture}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Arrows
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tikzset{
+    myarrow/.style={
+        draw,
+        fill=blue,
+        single arrow,
+        minimum height=3.5ex,
+        single arrow head extend=1ex
+    }
+}
+
+\newcommand{\arrowleft}{%
+\tikz [baseline=-0.5ex]{\node [myarrow,rotate=0] {};}
+}
+\newcommand{\arrowright}{%
+\tikz [baseline=-0.5ex]{\node [myarrow,rotate=180] {};}
+}
+\newcommand{\arrowup}{%
+\tikz [baseline=-0.5ex]{\node [myarrow,rotate=90] {};}
+}
+\newcommand{\arrowdown}{%
+\tikz [baseline=-1ex]{\node [myarrow,rotate=-90] {};}
+}
+
+\newcommand\tikzmark[1]{%
+  \tikz[remember picture,overlay]\node (#1) {};%
+}
+
+\newcommand\Connect[3][]{%
+\tikz[remember picture,overlay]
+  \draw[->,red,>=latex,#1] (#2.north east) -- ( $ (#3.north west) + (-20pt,0) $ );%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 1x1 figure (full page)
+\newcommand{\oneFigMax}[1]{
+  \clearpage
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[at=(current page.center),yshift=-0.5cm] {
+      \includegraphics[width=1.0\paperwidth,keepaspectratio]{./figures/#1}
+    };
+  \end{tikzpicture}
+}
+
+%%% 1x1 figure (with label)
+\newcommand{\oneFigLabel}[3]{
+  \begin{figure}[!ht]
+    \begin{center}
+      \includegraphics[width=#3\textwidth,keepaspectratio]{./figures/#2}
+      \label{fig:#1}
+    \end{center}
+  \end{figure}
+}
+
+
+%%% 1x1 figure
+\newcommand{\oneFig}[2]{
+  \begin{figure}[!ht]
+    \begin{center}
+      \includegraphics[width=#2\textwidth,keepaspectratio]{./figures/#1}
+    \end{center}
+  \end{figure}
+}
+
+
+%%% 1x1 figure (no label)
+\newcommand{\oneFigNoLabel}[2]{
+  \begin{figure}[!ht]
+    \begin{center}
+      \includegraphics[width=#2\textwidth,keepaspectratio]{./figures/#1}
+    \end{center}
+  \end{figure}
+}
+
+%%% 2x1 figure
+\newcommand{\twoFig}[4]{
+\begin{columns}[T] %For stable vertical alignment of columns
+  \begin{column}{0.5\textwidth}
+    \oneFig{#1}{#2}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \oneFig{#3}{#4}
+  \end{column}
+\end{columns}
+}
+
+
+%%% 1x3 figures
+\newcommand{\threeFig}[4]{
+  \begin{columns}[T] %For stable vertical alignment of columns
+    \begin{column}{0.32\textwidth}
+      \oneFig{#1}{#4}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \oneFig{#2}{#4}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+      \oneFig{#3}{#4}
+    \end{column}
+  \end{columns}
+}
+
+
+%%% 2x2 figures
+\newcommand{\fourFig}[9]{
+\begin{columns}[T] %For stable vertical alignment of columns
+  \begin{column}{0.5\textwidth}
+    \oneFigLabel{#1_a}{#2}{#3}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \oneFigLabel{#1_b}{#4}{#5}
+  \end{column}
+\end{columns}
+\begin{columns}[T] %For stable vertical alignment of columns
+  \begin{column}{0.5\textwidth}
+    \oneFigLabel{#1_c}{#6}{#7}
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \oneFigLabel{#1_d}{#8}{#9}
+  \end{column}
+\end{columns}
+}
+
+
+%%% 3x3 figures
+\newcommand{\sixFig}[7]{
+    \begin{columns}[T] %For stable vertical alignment of columns
+    \begin{column}{0.295\textwidth}
+     \oneFigLabel{#1_a}{#2}{1.0} 
+    \end{column}
+    \begin{column}{0.295\textwidth}
+	\oneFigLabel{#1_b}{#3}{1.0} 
+    \end{column}
+    \begin{column}{0.295\textwidth}
+       \oneFigLabel{#1_c}{#4}{1.0}
+    \end{column}
+  \end{columns}
+    \begin{columns}[T] %For stable vertical alignment of columns
+    \begin{column}{0.295\textwidth}
+	\oneFigLabel{#1_d}{#5}{1.0} 
+    \end{column}
+    \begin{column}{0.295\textwidth}
+ 	\oneFigLabel{#1_e}{#6}{1.0} 
+    \end{column}
+    \begin{column}{0.295\textwidth}
+	\oneFigLabel{#1_f}{#7}{1.0} 
+    \end{column}
+  \end{columns}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figures inside tcolorboxes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Need phantom character to control height of title box 
+%%% (different text can have different height and causes vertical-alignment problems)
+\newcommand{\tColorBoxTitle}[1]{\SpecialColour{#1\vphantom{\Large$\left(\right)$}}}
+
+%%% rows x columns = 1 x 1 figures (1 titles)
+\newcommand{\oneFigColumns}[3]{
+  \begin{columns}[T] %For stable vertical alignment of columns
+      \begin{column}{#3\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#2}]
+          \oneFig{#1}{1.0}
+        \end{tcolorbox}
+      \end{column}
+  \end{columns}
+}
+
+%%% rows x columns = 1 x 1 figures (1 titles)
+\newcommand{\oneFigColumnsAndText}[4]{
+  \begin{columns}[T] %For stable vertical alignment of columns
+      \begin{column}{0.5\textwidth}
+        {#4}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#2}]
+          \oneFig{#1}{#3}
+        \end{tcolorbox}
+      \end{column}
+  \end{columns}
+}
+
+%%% rows x columns = 1 x 1 figures (1 titles)
+\newcommand{\oneFigColumnsAndTextAlt}[4]{
+  \begin{columns}[T] %For stable vertical alignment of columns
+      \begin{column}{0.5\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#2}]
+          \oneFig{#1}{#3}
+        \end{tcolorbox}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        {#4}
+      \end{column}
+  \end{columns}
+}
+
+%%% rows x columns = 1 x 2 figures (2 titles)
+\newcommand{\twoFigColumns}[5]{
+  \begin{columns}[T] %For stable vertical alignment of columns
+      \begin{column}{0.5\textwidth}
+        %\begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#2}]
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#2}]
+          \oneFig{#1}{#5}
+    \end{tcolorbox}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        %\begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#4}]
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#4}]
+        \oneFig{#3}{#5}
+    \end{tcolorbox}       
+      \end{column}
+  \end{columns}
+}
+
+%%% rows x columns = 2 x 1 figures (2 titles)
+\newcommand{\twoFigColumnsVertical}[5]{
+  \begin{columns}[T] %For stable vertical alignment of columns
+      \begin{column}{1.0\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#2}]
+          \oneFig{#1}{#5}
+        \end{tcolorbox}
+        \vspace{0.5cm}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#4}]
+          \oneFig{#3}{#5}
+        \end{tcolorbox}
+        \end{column}
+  \end{columns}
+}
+
+%%% rows x columns = 2 x 1 figures (2 titles)
+\newcommand{\twoFigVertical}[4]{
+  \begin{columns}[T] %For stable vertical alignment of columns
+      \begin{column}{1.0\textwidth}
+        \begin{tcolorbox}[transparentStyle]
+          \oneFig{#1}{#2}
+        \end{tcolorbox}
+          \vspace{0.5cm}
+          \begin{tcolorbox}[transparentStyle]
+            \oneFig{#3}{#4}
+            \end{tcolorbox}
+        \end{column}
+  \end{columns}
+}
+
+%%% rows x columns = 1 x 2 figures (2 titles)
+\newcommand{\twoFigColumnsArrowLeft}[5]{
+  \begin{columns}[T] %For stable vertical alignment of columns
+      \begin{column}{0.45\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#2}]
+          \oneFig{#1}{#5}
+    \end{tcolorbox}
+      \end{column}
+      \begin{column}{0.1\textwidth}
+        \begin{minipage}[c][0.6\textheight][c]{\linewidth}
+          \huge\arrowleft
+        \end{minipage}
+      \end{column}
+      \begin{column}{0.45\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#4}]
+          \oneFig{#3}{#5}
+    \end{tcolorbox}       
+      \end{column}
+  \end{columns}
+}
+
+%%% rows x columns = 1 x 2 figures (2 titles)
+\newcommand{\twoFigColumnsSize}[6]{
+  \begin{columns}[T] %For stable vertical alignment of columns
+      \begin{column}{0.5\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#2}]
+          \oneFig{#1}{#3}
+    \end{tcolorbox}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#5}]
+          \oneFig{#4}{#6}
+    \end{tcolorbox}       
+      \end{column}
+  \end{columns}
+}
+
+%%% rows x columns = 1 x 3 figures (3 titles)
+\newcommand{\threeFigColumns}[6]{    %soti changed size - temporary
+  \begin{columns}[T] %For stable vertical alignment of columns
+      \begin{column}{0.32\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#2}]
+          \oneFig{#1}{0.75}
+        \end{tcolorbox}
+      \end{column}
+      %\begin{column}{0.05\textwidth}\end{column}
+      \begin{column}{0.32\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#4}]
+          \oneFig{#3}{0.75}
+        \end{tcolorbox}
+      \end{column}
+      %\begin{column}{0.05\textwidth}\end{column}
+      \begin{column}{0.32\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#6}]
+          \oneFig{#5}{0.75}
+        \end{tcolorbox}       
+      \end{column}
+  \end{columns}
+}
+
+
+%%soti added this temporary
+%%% rows x columns = 1 x 3 figures (3 titles)
+\newcommand{\threeFigColumnsBig}[6]{    %soti changed size - temporary
+  \begin{columns}[T] %For stable vertical alignment of columns
+      \begin{column}{0.32\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#2}]
+          \oneFig{#1}{1.0}
+        \end{tcolorbox}
+      \end{column}
+      %\begin{column}{0.05\textwidth}\end{column}
+      \begin{column}{0.32\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#4}]
+          \oneFig{#3}{1.0}
+        \end{tcolorbox}
+      \end{column}
+      %\begin{column}{0.05\textwidth}\end{column}
+      \begin{column}{0.32\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#6}]
+          \oneFig{#5}{1.0}
+        \end{tcolorbox}       
+      \end{column}
+  \end{columns}
+}
+
+
+
+
+%%% rows x columns = 1 x 3 figures (3 titles)
+\newcommand{\threeFigColumnsCustomSize}[7]{
+  \begin{columns}[T] %For stable vertical alignment of columns
+      \begin{column}{0.32\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#2}]
+          \oneFig{#1}{#7}
+        \end{tcolorbox}
+      \end{column}
+      %\begin{column}{0.05\textwidth}\end{column}
+      \begin{column}{0.32\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#4}]
+          \oneFig{#3}{#7}
+        \end{tcolorbox}
+      \end{column}
+      %\begin{column}{0.05\textwidth}\end{column}
+      \begin{column}{0.32\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#6}]
+          \oneFig{#5}{#7}
+        \end{tcolorbox}       
+      \end{column}
+  \end{columns}
+}
+
+%%% rows x columns = 1 x 4 figures (4 titles)
+\newcommand{\fourFigColumns}[8]{
+  \vspace{-0.3cm}
+  \begin{columns}[T] %For stable vertical alignment of columns
+      \begin{column}{0.25\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#2}]
+          \oneFig{#1}{0.90} %0.85
+        \end{tcolorbox}
+      \end{column}
+      \begin{column}{0.25\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#4}]
+          \oneFig{#3}{0.90}
+        \end{tcolorbox}
+      \end{column}
+      \begin{column}{0.25\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#6}]
+          \oneFig{#5}{0.90}
+        \end{tcolorbox}
+      \end{column}
+      \begin{column}{0.25\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#8}]
+          \oneFig{#7}{0.90}
+        \end{tcolorbox}
+      \end{column}
+  \end{columns}
+}
+
+%%% rows x columns = 2 x 2 figures (4 titles)
+\newcommand{\fourFigColumnsRatio}[8]{
+  \vspace{-0.3cm}
+  \begin{columns}[T] %For stable vertical alignment of columns
+      \begin{column}{0.5\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#2}]
+          \oneFig{#1}{0.42}
+        \end{tcolorbox}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#4}]
+          \oneFig{#3}{0.42}
+        \end{tcolorbox}
+      \end{column}
+  \end{columns}\vspace{0.2cm}
+  \begin{columns}[T] %For stable vertical alignment of columns
+      \begin{column}{0.5\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#6}]
+          \oneFig{#5}{0.42}
+        \end{tcolorbox}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#8}]
+          \oneFig{#7}{0.42}
+        \end{tcolorbox}
+      \end{column}
+  \end{columns}
+}
+
+%%% rows x columns = 3 x 3 figures (1 title) and 1 x 2 (1 title)
+\newcommand{\sixFigColumns}[9]{
+  % #9 typical value is 0.25
+    \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#1}] \end{tcolorbox}
+    \begin{columns}[T] %For stable vertical alignment of columns
+    \begin{column}{#9\textwidth} %0.32 for plots without ration
+      \begin{tcolorbox}[transparentStyle] \oneFig{#2}{1.0} \end{tcolorbox}
+    \end{column}
+    \begin{column}{#9\textwidth}
+      \begin{tcolorbox}[transparentStyle] \oneFig{#3}{1.0} \end{tcolorbox}
+    \end{column}
+    \begin{column}{#9\textwidth}
+      \begin{tcolorbox}[transparentStyle] \oneFig{#4}{1.0} \end{tcolorbox}
+    \end{column}
+    \end{columns}
+    %\vspace{-0.2cm}
+    \begin{tcolorbox}[transparentStyle, title=\tColorBoxTitle{#5}] \end{tcolorbox}
+    \begin{columns}[T] %For stable vertical alignment of columns
+    \begin{column}{#9\textwidth}
+      \begin{tcolorbox}[transparentStyle] \oneFig{#6}{1.0} \end{tcolorbox}
+    \end{column}
+    \begin{column}{#9\textwidth}
+      \begin{tcolorbox}[transparentStyle] \oneFig{#7}{1.0} \end{tcolorbox}
+    \end{column}
+    \begin{column}{#9\textwidth}
+      \begin{tcolorbox}[transparentStyle] \oneFig{#8}{1.0} \end{tcolorbox}
+    \end{column}
+  \end{columns}
+}
+
+%%% rows x columns = 3 x 3 figures
+\newcommand{\nineFigs}[9]{
+  \vspace{-0.5cm}
+  \threeFigColumnsCustomSize{empty}{}{empty}{}{#9}{#8}{0.6}
+  \vspace{0.0cm}
+  \threeFigColumnsCustomSize{empty}{}{empty}{}{#7}{#8}{0.6}
+  \vspace{0.0cm}
+  \threeFigColumnsCustomSize{#1}{#2}{#3}{#4}{#5}{#6}{0.6}
+}
+
+
+%%% rows x columns = 3 x 2 figures (L Shape)
+\newcommand{\fiveFigsLShapeReversed}[9]{
+    \begin{columns}[T] %For stable vertical alignment of columns
+    \begin{column}{0.66\textwidth}
+      #1
+    \end{column}
+    \begin{column}{0.34\textwidth}
+      \twoFigColumnsVertical{#2}{#3}{#4}{#5}{0.45}
+    \end{column}
+    \end{columns}
+    \vspace{0.2cm}
+    \threeFigColumnsCustomSize{#6}{boosted top}{#7}{boosted \bW{+}}{#8}{resolved top}{0.45}
+}
+
+%%% rows x columns = 3 x 2 figures (L Shape)
+\newcommand{\fiveFigsLShapeReversedAlt}[9]{
+  \begin{columns}[T] %For stable vertical alignment of columns
+    \begin{column}{0.7\textwidth}
+      #1
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      \twoFigVertical{#2}{#3}{#4}{#5}
+    \end{column}
+  \end{columns}
+  \begin{columns}[T] %For stable vertical alignment of columns
+    \begin{column}{1.0\textwidth}
+      \threeFig{#6}{#7}{#8}{#9}
+    \end{column}
+  \end{columns}
+}
+
+%%% rows x columns = 2 x 4 figures (1 title) and 1 x 2 (1 title)
+\newcommand{\eightFigColumns}[8]{
+    \begin{tcolorbox}[transparentStyle] \end{tcolorbox}
+    \begin{columns}[T] %For stable vertical alignment of columns
+    \begin{column}{0.24\textwidth}
+      \begin{tcolorbox}[transparentStyle] \oneFig{#1}{1.0} \end{tcolorbox}
+    \end{column}
+    \begin{column}{0.24\textwidth}
+      \begin{tcolorbox}[transparentStyle] \oneFig{#2}{1.0} \end{tcolorbox}
+    \end{column}
+    \begin{column}{0.24\textwidth}
+      \begin{tcolorbox}[transparentStyle] \oneFig{#3}{1.0} \end{tcolorbox}
+    \end{column}
+    \begin{column}{0.24\textwidth}
+      \begin{tcolorbox}[transparentStyle] \oneFig{#4}{1.0} \end{tcolorbox}
+    \end{column}
+  \end{columns}
+    \begin{tcolorbox}[transparentStyle] \end{tcolorbox}
+    \begin{columns}[T] %For stable vertical alignment of columns
+    \begin{column}{0.24\textwidth}
+      \begin{tcolorbox}[transparentStyle] \oneFig{#5}{1.0} \end{tcolorbox}
+    \end{column}
+    \begin{column}{0.24\textwidth}
+      \begin{tcolorbox}[transparentStyle] \oneFig{#6}{1.0} \end{tcolorbox}
+    \end{column}
+    \begin{column}{0.24\textwidth}
+      \begin{tcolorbox}[transparentStyle] \oneFig{#7}{1.0} \end{tcolorbox}
+    \end{column}
+    \begin{column}{0.24\textwidth}
+      \begin{tcolorbox}[transparentStyle] \oneFig{#8}{1.0} \end{tcolorbox}
+    \end{column}
+\end{columns}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Animations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1x1 animation
+\newcommand{\oneAnimation}[4]{
+  \begin{columns}[T] %For stable vertical alignment of columns
+    \begin{column}{#4\textwidth}
+      \begin{tcolorbox}[animationStyle]
+        \begin{center}
+          \animategraphics[width=1.0\textwidth, #3]{#2}{./figures/animations/#1}{}{}
+        \end{center}
+      \end{tcolorbox}
+    \end{column}
+  \end{columns}
+}
+
+% 1x1 animation, 1 title
+\newcommand{\oneAnimColumn}[5]{
+  \begin{columns}[T] %For stable vertical alignment of columns
+    \begin{column}{#5\textwidth}
+      \begin{tcolorbox}[animationStyle, title=\tColorBoxTitle{#2}]
+        \begin{center}
+          \animategraphics[width=1.0\textwidth, #4]{#3}{./figures/animations/#1}{}{}
+          %\mediabutton[jsaction={anim.myAnim.playFwd();}]{\fbox{\strut Play}}
+          %\mediabutton[jsaction={anim.myAnim.pause();}]{\fbox{\strut Pause}}
+        \end{center}
+      \end{tcolorbox}
+    \end{column}
+  \end{columns}
+}
+
+%%% 1x2 animation, 2 titles
+\newcommand{\twoAnimColumns}[9]{
+  \begin{columns}[T] %For stable vertical alignment of columns
+      \begin{column}{#9\textwidth}
+        \begin{tcolorbox}[animationStyle,title=\tColorBoxTitle{#2}]
+        \begin{center}
+          \animategraphics[width=1.0\textwidth, #4]{#3}{./figures/animations/#1}{}{}
+        \end{center}
+    \end{tcolorbox}
+      \end{column}
+      \begin{column}{#9\textwidth}
+        \begin{tcolorbox}[animationStyle,title=\tColorBoxTitle{#6}]
+        \begin{center}
+          \animategraphics[width=1.0\textwidth, #8]{#7}{./figures/animations/#5}{}{}
+        \end{center}
+    \end{tcolorbox}       
+      \end{column}
+  \end{columns}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Columns for Text & Formulae
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\twoTitledColumns}[4]{
+\begin{columns}[T] %For stable vertical alignment of columns
+  \begin{column}{0.50\textwidth}
+    \centering\SpecialColour{\bf{#1}}\\\vspace{0.17cm}
+    \scriptsize{#2}
+  \end{column}
+  \begin{column}{0.50\textwidth}
+    \centering\SpecialColour{\bf{#3}}\\
+    \scriptsize{#4}
+  \end{column}
+\end{columns}
+}
+
+%%% 1x2
+\newcommand{\twoColumns}[2]{
+\begin{columns}[T] %For stable vertical alignment of columns
+  \begin{column}{0.49\textwidth}
+    \scriptsize{#1}
+    %\tiny{#1}
+  \end{column}
+  \begin{column}{0.02\textwidth} \end{column}
+  \begin{column}{0.49\textwidth}
+    \scriptsize{#2}
+    %\tiny{#2}
+  \end{column}
+\end{columns}
+}
+
+%%% 1x2
+\newcommand{\twoColumnsAsym}[2]{
+\begin{columns}[T] %For stable vertical alignment of columns
+  \begin{column}{0.69\textwidth}
+    \scriptsize{#1}
+    %\tiny{#1}
+  \end{column}
+  \begin{column}{0.02\textwidth} \end{column}
+  \begin{column}{0.29\textwidth}
+    \scriptsize{#2}
+    %\tiny{#2}
+  \end{column}
+\end{columns}
+}
+
+%%% 1x2
+\newcommand{\twoColumnsAsymAlt}[2]{
+\begin{columns}[T] %For stable vertical alignment of columns
+  \begin{column}{0.55\textwidth}
+    \scriptsize{#1}
+    %\tiny{#1}
+  \end{column}
+  \begin{column}{0.02\textwidth} \end{column}
+  \begin{column}{0.43\textwidth}
+    \scriptsize{#2}
+    %\tiny{#2}
+  \end{column}
+\end{columns}
+}
+
+
+%%% 1x3
+\newcommand{\threeColumns}[3]{
+\begin{columns}[T] %For stable vertical alignment of columns
+  \begin{column}{0.3333\textwidth}
+    \small
+        {#1}
+  \end{column}
+  \begin{column}{0.3333\textwidth}
+    \small
+        {#2}
+  \end{column}
+  \begin{column}{0.3333\textwidth}
+    \small
+        {#3}
+  \end{column}
+\end{columns}
+\normalsize
+}
+
+%%% 1x2, align env
+\newcommand{\twoColumnsAlign}[2]{
+  \begin{columns}[T] %For stable vertical alignment of columns[totalwidth=1.0\textwidth]
+    \begin{column}{0.5\textwidth}
+      \begin{align*}
+        #1
+      \end{align*}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{align*}
+  	#2
+      \end{align*}
+    \end{column}
+  \end{columns}
+}
+
+%%% 1x2, itemize env
+\newcommand{\twoColumnsItemize}[2]{
+\begin{columns}[T] %For stable vertical alignment of columns
+  \begin{column}{0.5\textwidth}
+    \begin{itemize}
+      %\scriptsize{#1}
+      #1
+    \end{itemize}    
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    \begin{itemize}
+      %\scriptsize{#2}
+      #2
+    \end{itemize}
+  \end{column}
+\end{columns}
+\normalsize
+}
+
+%%% 1x2, itemize env
+\newcommand{\threeColumnsItemize}[3]{
+\begin{columns}[T] %For stable vertical alignment of columns
+  \begin{column}{0.33\textwidth}
+    \begin{itemize}
+      \scriptsize{#1}
+    \end{itemize}    
+  \end{column}
+  \begin{column}{0.33\textwidth}
+    \begin{itemize}
+      \scriptsize{#2}
+    \end{itemize}
+  \end{column}
+  \begin{column}{0.33\textwidth}
+    \begin{itemize}
+      \scriptsize{#3}
+    \end{itemize}
+  \end{column}
+\end{columns}
+\normalsize
+}
+
+%%% 1x4, itemize env
+\newcommand{\fourColumnsItemize}[4]{
+\begin{columns}[T] %For stable vertical alignment of columns
+  \begin{column}{0.25\textwidth}
+    \begin{itemize}
+      \scriptsize{#1}
+    \end{itemize}    
+  \end{column}
+  \begin{column}{0.25\textwidth}
+    \begin{itemize}
+      \scriptsize{#2}
+    \end{itemize}
+  \end{column}
+  \begin{column}{0.25\textwidth}
+    \begin{itemize}
+      \scriptsize{#3}
+    \end{itemize}
+  \end{column}
+  \begin{column}{0.25\textwidth}
+    \begin{itemize}
+      \scriptsize{#4}
+    \end{itemize}
+  \end{column}
+\end{columns}
+\normalsize
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% General Shortcuts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\GoToBackup}[1]{\hyperlink{#1}{\nameref{backup:#1} \refBackup{#1}}}
+\newcommand{\GoToBackupNoPage}[1]{\hyperlink{#1}{\nameref{backup:#1}}}
+%\newcommand{\GoToBackupCustom}[2]{\hyperlink{#1}{\nameref{backup:#2}}}
+%\newcommand{\RefBackupSlide}[2]{\MyHRef{#1}{#2}}
+\newcommand{\RefBackupSlide}[2]{\hyperlink{#1}{#2}}
+\newcommand{\GoTo}[1]{\hyperlink{#1}{\nameref{sec:#1}}}
+\newcommand{\LinkToFrameGo}[2]{\hyperlink{#1}{\beamergotobutton{#2}} }
+\newcommand{\LinkToFrameBack}[2]{\hyperlink{#1}{\beamerreturnbutton{#2}} }
+\newcommand{\BackToNavigation}{\vfill \hfill \LinkToFrameBack{Backup}{Navigation}}
+\newcommand{\hilight}[2]{\colorbox{#1}{#2}}
+\newcommand{\Show}[1]{\temporal<#1>{\color{gray}}{\color{black}}{\color{black}}}
+\newcommand{\ShowCustom}[2]{\temporal<#1>{\color{gray}}{\color{#2}}{\color{#2}}}
+\newcommand{\SmallNote}[1]{\Emph{(#1)}}%\normalsize)} %\scriptsize\Emph{#1}s\normalsize)}
+\newcommand{\TinyNote}[1]{(\tiny\Emph{#1}\normalsize)}
+\newcommand{\SpecialColour}[1]{\textcolor{\MySectionColour}{#1}}
+\newcommand{\SpecialColourAlt}[1]{\textcolor{kGreen}{#1}}
+\newcommand{\Emph}[1]{\SpecialColour{#1}}
+\newcommand{\TextColour}[2]{\textcolor{#1}{#2}}
+\newcommand{\NewLineCentre}[1]{\begin{center} #1 \end{center}}
+\newcommand{\refslide}[1]{Slide~\ref{Slide:#1}\xspace}
+\newcommand{\refBackup}[1]{(page \ref{#1})\xspace}
+\newcommand{\CloudText}[1]{
+  \begin{tikzpicture}
+    \node[align=center,kGreen!50, draw,fill, text=white, cloud, cloud puffs=12, aspect=3.0, scale=0.5] at (0,0) {\textbf{\Large \bf{#1}}};
+\end{tikzpicture}
+}
+\newcommand{\Cloud}[3][180]% [angle], content
+           {%
+             \begin{tikzpicture}[overlay]
+               \node[align=center, fill=#2, draw,
+                 text=\MySubsectionTextColour, cloud callout,
+                 cloud puffs=17, cloud puff arc=140,
+                 callout pointer segments=3, anchor=pointer, callout
+                 relative pointer={(#1:2 cm )}, aspect=4,scale=0.5] at
+               (0.2ex,0.5ex) {\sc{#3} };
+             \end{tikzpicture}
+           }
+
+\newcommand{\Note}[4][180]% [angle], content
+           {%
+             \begin{tikzpicture}[overlay]
+               %\node[align=center, fill=#2, draw,
+                 %text=\MySubsectionTextColour,
+                 %ellipse callout,
+               %rectangle callout,
+               \node[align=center,
+                 fill=white,
+                 text=#2,
+                 draw=#2,
+                 thick,
+                 inner sep=0.2cm,
+                 #4, %ellipse callout, rectangle callout
+                 %callout pointer segments=3,
+                 anchor=pointer,
+                 callout relative pointer={(#1:0.5 cm )}, % distance to callout 
+                 aspect=1, scale=0.65] at (0.2ex, 0.6ex) {\MakeUppercase{\bf{#3}} };
+             \end{tikzpicture}
+           }
+
+\newcommand{\NoteAlt}[4][180]% [angle], content
+           {%
+             \begin{tikzpicture}[overlay]
+               \node[align=center, fill=white, text=#2, draw=#2, thick,
+                 inner sep=0.2cm,
+                 #4, %ellipse callout, rectangle callout
+                 %callout pointer segments=3,
+                 anchor=pointer,
+                 callout relative pointer={(#1:0.5 cm )}, % distance to callout 
+                 aspect=1, scale=0.65] at (0.2ex, 0.6ex) {\bf{#3}};
+             \end{tikzpicture}
+           }
+           
+\newcommand{\SampleTag}[2]{\Note[180]{#1}{#2}{rectangle callout}}
+\newcommand{\ByATLASTag}{\Note[180]{kHPlusBlue}{ATLAS}{rectangle callout}}
+\newcommand{\CiteTag}[1]{\NoteAlt[180]{kHPlusBlue}{#1}{rectangle callout}}
+\newcommand{\DoneTag}{\Note[180]{kDarkGreen}{Done}{rectangle callout}}
+\newcommand{\PreliminaryTag}{\Note[180]{kHLTausRed}{Preliminary!}{rectangle callout}}
+\newcommand{\vPreliminaryTag}{\Note[180]{kHLTausRed}{Very Preliminary}{rectangle callout}}
+\newcommand{\ValidateTag}{\Note[180]{kHLTausOrange}{Validate}{rectangle callout}}
+\newcommand{\BugTag}{\Note[180]{kHLTausRed}{Bug}{rectangle callout}}
+\newcommand{\DebugTag}{\Note[180]{kHLTausRed}{Debug}{rectangle callout}}
+\newcommand{\NewTag}{\Note[180]{kDarkGreen}{New}{rectangle callout}}
+\newcommand{\OldTag}{\Note[180]{kHLTausOrange}{Old}{rectangle callout}}
+%\newcommand{\DevTag}{\Note[180]{kHLTausBlue}{Dev}{rectangle callout}}
+\newcommand{\DevTag}{\Note[180]{kHLTausBlue}{In Development}{rectangle callout}}
+\newcommand{\ProgressTag}{\Note[180]{kHLTausOrange}{In Progress}{rectangle callout}}
+\newcommand{\Callout}[1]{\Note[180]{kDarkGreen}{#1}{rectangle callout}}
+\newcommand{\SomeTag}[2]{\Note[180]{#2}{#1}{rectangle callout}}
+\newcommand{\MCTag}{\Note[180]{kHLTausRed}{MC}{rectangle callout}}
+\newcommand{\MCMatchedTag}{\Note[180]{kHLTausRed}{MC-Matched}{rectangle callout}}
+\newcommand{\QCDTag}{\Note[180]{QCD}{QCD=Data-EWK}{rectangle callout}}
+\newcommand{\FromDataTag}{\Note[180]{kHLTausRed}{From Data}{rectangle callout}}
+\newcommand{\FromMCTag}{\Note[180]{kHLTausBlue}{From MC}{rectangle callout}}
+\newcommand{\TodoListTag}{\Note[180]{kHLTausBlue}{To-Do List}{rectangle callout}}
+\newcommand{\TodoTag}{\Note[180]{kHLTausBlue}{To-Do}{rectangle callout}}
+\newcommand{\RequestedTag}{\Note[180]{kDarkGreen}{Requested}{rectangle callout}}
+%=================================================
+% Soti's Tags
+%=================================================
+
+\newcommand{\GenuineTag}{\Note[180]{kDarkGreen}{Genuine}{rectangle callout}}
+\newcommand{\FakeTag}{\Note[180]{kHLTausRed}{Fake}{rectangle callout}}
+\newcommand{\TopDirectionGenuineTag}{\Note[180]{kHPlusBlue}{Top Direction Genuine}{rectangle callout}}
+\newcommand{\TopDirectionFakeTag}{\Note[180]{kHLTausOrange}{Top Direction Fake}{rectangle callout}}
+
+\newcommand{\GouskosANTag}{\Note[180]{kHLTausBlue}{AN 2016/437 - \textit{Gouskos et al.}}{rectangle callout}}
+\newcommand{\TTnote}{\Note[180]{kHLTausRed}{TT}{rectangle callout}}
+\newcommand{\QCDnote}{\Note[180]{kHLTausBlue}{QCD}{rectangle callout}}
+
+\newcommand{\BDTGenuineTag}{\Note[180]{kDarkGreen}{BDT Genuine}{rectangle callout}}
+
+\newcommand{\NormToLumi}{\Note[180]{kHLTausOrange}{Normalized to Lumi}{rectangle callout}}
+\newcommand{\NormToOne}{\Note[180]{kHLTausRed}{Normalized to Unity}{rectangle callout}}
+
+\newcommand{\pTorder}{\Note[180]{kHLTausRed}{\pT order}{rectangle callout}}
+\newcommand{\BDTorder}{\Note[180]{kDarkGreen}{BDT order}{rectangle callout}}
+
+\newcommand{\Investigate}{\Note[180]{kDarkGreen}{Investigate}{rectangle callout}}
+\newcommand{\nextSlide}{\Note[180]{kHLTausBlue}{Next Slide}{rectangle callout}}
+
+\NewDocumentCommand\StickyNote{O{6cm}mO{6cm}}{%
+  \begin{tikzpicture}
+    \node[
+      drop shadow={
+        shadow xshift=2pt,
+        shadow yshift=-4pt
+      },
+      inner xsep=7pt,
+      fill=kPostitYellow,
+      xslant=-0.1,
+      yslant=0.1,
+      inner ysep=10pt
+    ] {\parbox[t][#1][c]{#3}{\texttt{#2}}};
+  \end{tikzpicture}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Special characters and icons
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\CloudTextAlt}[1]{
+  \begin{tikzpicture}
+    \node[align=center,kRed!50, draw,fill, text=white, cloud, cloud puffs=12, aspect=3.0, scale=0.5] at (0,0) {\textbf{\Large \bf{#1}}};
+\end{tikzpicture}
+}
+\newcommand{\EllipseText}[1]{
+  \begin{tikzpicture}
+    \node[align=center,kGreen!50, draw,fill, text=white, ellipse, cloud puffs=12, aspect=3.0, scale=0.5] at (0,0) {\textbf{\Large \bf{#1}}};
+\end{tikzpicture}
+}
+\newcommand{\EllipseTextAlt}[1]{
+  \begin{tikzpicture}
+    \node[align=center,kRed!50, draw,fill, text=white, ellipse, cloud puffs=12, aspect=3.0, scale=0.5] at (0,0) {\textbf{\Large \bf{#1}}};
+\end{tikzpicture}
+}
+\newcommand{\PolygonText}[1]{
+  \begin{tikzpicture}
+    \node[align=center,kGreen!50, draw,fill, text=white, regular polygon,regular polygon sides=5, aspect=3.0, scale=0.5] at (0,0) {\textbf{\Large \bf{#1}}};
+\end{tikzpicture}
+}
+\newcommand{\StarText}[1]{
+  \begin{tikzpicture}
+    \node[align=center,kGreen!50, draw,fill, text=white, star, star points=6, scale=0.5] at (0,0) {\textbf{\Large \bf{#1}}};
+\end{tikzpicture}
+}
+
+\newcommand{\Winner}[1]{#1~\textcolor{kGreen}{\ding{51}}} %\checkmark}}
+\newcommand{\Loser}[1]{#1~\textcolor{kRed}{\ding{55}}}
+\newcommand{\Good}{\textcolor{kGreen}{\ding{51}}} %https://tex.stackexchange.com/questions/42619/x-mark-to-match-checkmark
+\newcommand{\Bad}{\textcolor{kRed}{\ding{55}}} %https://tex.stackexchange.com/questions/42619/x-mark-to-match-checkmark
+\newcommand{\SoSo}{\textcolor{kOrange}{\ding{51}}} %https://tex.stackexchange.com/questions/42619/x-mark-to-match-checkmark
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Slide Definitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Slide Transitions:
+% Horizontal blinds pulled away: \transblindshorizontal
+% Vertical blinds pulled away: \transblindsvertical
+% Move to center from all sides: \transboxin
+% Move to all sides from center: \transboxout
+% Slowly dissolve what was shown before: \transdissolve
+% Glitter sweeps in specified direction: \transglitter
+% Sweeps two vertical lines in:   \transslipverticalin
+% Sweeps two vertical lines out:  \transslipverticalout
+% Sweeps two horizontal lines in: \transhorizontalin
+% Sweeps two horizontal lines out: \transhorizontalout
+% Sweeps single line in specified direction: \transwipe
+% Show slide specified number of seconds: \transduration{2}
+% New (not documented yet): \transcover, \transfade, \transpush, \transuncover
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\BeginLabelledSlide}[3]{
+\begin{frame}[#2]\vspace{-0.2cm} %http://tex.stackexchange.com/questions/116390/beamer-frame-environment-introduces-5-69pt-vertical-margin
+  \begin{ChangeMargin}{+0.2cm}{+0.2cm}
+    \label{#1} 
+    \setcounter{subfigure}{0}% Reset subfigure counter (otherwise it keeps counting)
+    #3
+    %\BackToNavigation % not really needed as I have the navigation on top!
+  \end{ChangeMargin}
+\end{frame}
+}
+
+\newcommand{\BackupSlide}[4]{
+  \MySubSectionNoTOC{#1}
+  \BeginLabelledSlide{#2}{#3}{#4}
+}
+
+% http://tex.stackexchange.com/questions/110229/beamer-full-width-image-aligned-to-top-with-a-frame-title
+\newcommand{\Slide}[2]{
+  \begin{frame}[#1] \vspace{-0.2cm} %http://tex.stackexchange.com/questions/116390/beamer-frame-environment-introduces-5-69pt-vertical-margin   
+    \begin{ChangeMargin}{+0.2cm}{+0.2cm}
+      %%% Slide transitions only work in full-view-mode (adobe acrobat)
+      %\transfade
+      %\transwipe
+      \setcounter{subfigure}{0}% Reset subfigure counter (otherwise it keeps counting)
+      #2
+    \end{ChangeMargin}
+  \end{frame}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Environment Definitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% See: http://stackoverflow.com/questions/1670463/latex-change-margins-of-only-a-few-pages
+\newenvironment{ChangeMargin}[2]{%
+\begin{list}{}{%
+\setlength{\topsep}{0cm}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+}%
+\item[]}{\end{list}}
+
+
+% See: http://tex.stackexchange.com/questions/167711/showing-margins-frames-in-beamer-slides
+\newenvironment{CustomiseLayout}[9]{%
+  \setlength{\hoffset}{#1}%
+  \setlength{\oddsidemargin}{#2}%
+  \setlength{\headheight}{#3}%
+  \setlength{\textheight}{#4}%
+  \setlength{\textwidth}{#5}%
+  \setlength{\footskip}{#6}%
+  \setlength{\voffset}{#7}%
+  \setlength{\topmargin}{#8}%
+  \setlength{\headsep}{#9}%
+  \setlength{\marginparsep}{0cm}%
+  \setlength{\marginparwidth}{0.0cm}%
+  \setlength{\marginparpush}{0cm}%
+  \setlength{\voffset}{0cm}%  
+}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom Section Types
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\MySectionWithFile}[2]{
+  \section{#1}{
+    \label{sec:#1}
+    \input{./tex/#2}
+  }
+}
+
+\newcommand{\MySectionWithFileNoTOC}[2]{
+  \section*{#1}{
+    \label{sec:#1}
+    \input{./tex/#2}
+  }
+}
+
+\newcommand{\MySection}[1]{
+  \section{#1}
+  \label{sec:#1}
+}
+
+\newcommand{\MySectionAlt}[1]{
+  \tikz{\overlaynode<\MySubsectionColour,{\MyMainTextColour,xshift=1}>{{#1}};}
+  \label{sec:#1}
+}
+
+\newcommand{\MySectionNoTOC}[1]{
+  \section*{#1}
+  \label{sec:#1}
+}
+
+\newcommand{\MySubSectionBegin}[3]{
+  \AtBeginSubsection[]
+  {
+    \Slide{c}{
+      \frametitle{#3}
+      \oneFigNoLabel{#1}{#2}
+    }
+  }
+}
+
+\newcommand{\DisableAtBeginSubsection}{\AtBeginSubsection[]{}}
+
+
+\newcommand{\MySubSection}[1]{
+  \subsection{#1}
+  %\label{subsec:#1} %not needed at the moment. it gives warning when  two subsections have the same title
+}
+
+\newcommand{\MySubSectionNoTOC}[1]{
+  \subsection*{#1}{}
+  \label{subsec:#1}
+}
+
+\newcommand{\MyBackupSubSectionNoTOC}[1]{
+  \subsection*{#1}{}
+  \label{backup:#1}
+}
+
+\newcommand{\MyBackupSection}[2]{
+  \MyBackupSubSectionNoTOC{#1}{}
+  \BeginLabelledSlide{#1}{t}{#2}
+  %\BeginLabelledSlide{backup:#1}{t}{#2\BackToNavigation}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Boxes for Formulae, Statements, Laws
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% WARNING: \CustomiseTextMargins{0.0cm}{0.0cm} in talk.tex must be changed to add margins!
+\newcommand{\PhysQuote}[1]{\begin{quote}\centering{\color{\MySectionColour}\Ovalbox{\color{\MySectionColour}#1}}\end{quote}}
+%
+\newcommand{\PhysDefinition}[2]{
+  \SetDefaultRoundBoxColour
+  \begin{beamerboxesrounded}[upper=uppercol,lower=lowercol,shadow=false]{#1} #2 \end{beamerboxesrounded}
+  \SetDefaultRoundBoxColour
+}
+%
+\newcommand{\PhysLaw}[2]{
+ \setbeamercolor{uppercol}{fg=white, bg=kGreen}
+  \setbeamercolor{lowercol}{fg=black, bg=kGreen!20}
+  \begin{beamerboxesrounded}[upper=uppercol,lower=lowercol,shadow=false]{#1} #2 \end{beamerboxesrounded}
+  \SetDefaultRoundBoxColour
+}
+%
+\newcommand{\PhysFormula}[2]{
+  \setbeamercolor{uppercol}{fg=white, bg=kOrange}
+  \setbeamercolor{lowercol}{fg=black, bg=kOrange!20}
+  \begin{beamerboxesrounded}[upper=uppercol,lower=lowercol,shadow=false]{#1} \vspace{-0.4cm}\begin{align*}#2\end{align*} \end{beamerboxesrounded}
+  \SetDefaultRoundBoxColour
+}
+%
+\newcommand{\PhysMultipleChoiceQuestion}[3]{
+  \setbeamercolor{uppercol}{fg=white, bg=\MySectionColour}
+  \setbeamercolor{lowercol}{fg=black, bg=\MySectionColour!20}
+  \begin{beamerboxesrounded}[upper=uppercol,lower=lowercol,shadow=false]{Ερώτηση}\begin{enumerate}#1\end{enumerate} \only<2>{\begin{align*}#2\end{align*}}\end{beamerboxesrounded}
+  \SetDefaultRoundBoxColour
+}
+%
+\newif\ifExamples\Examplesfalse
+\ifExamples\else\newcounter{examples} \setcounter{examples}{0}\Examplestrue\fi 
+%
+\newcommand{\PhysNewExample}[1]{
+  \addtocounter{examples}{1}
+  \setbeamercolor{uppercol}{fg=white, bg=\MySectionColour}
+  \setbeamercolor{lowercol}{fg=black, bg=\MySectionColour!20}
+  \begin{beamerboxesrounded}[upper=uppercol,lower=lowercol,shadow=false]{Example \theexamples} #1 \end{beamerboxesrounded}
+  \SetDefaultRoundBoxColour
+}
+%
+\newcommand{\PhysExample}[1]{
+  \setbeamercolor{uppercol}{fg=white, bg=\MySectionColour}
+  \setbeamercolor{lowercol}{fg=black, bg=\MySectionColour!20}
+  \begin{beamerboxesrounded}[upper=uppercol,lower=lowercol,shadow=false]{Example \theexamples} #1 \end{beamerboxesrounded}
+  \SetDefaultRoundBoxColour
+}
+
+%
+\newcommand{\PhysExampleNoCount}[1]{
+  \setbeamercolor{uppercol}{fg=white, bg=\MySectionColour}
+  \setbeamercolor{lowercol}{fg=black, bg=\MySectionColour!20}
+  \begin{beamerboxesrounded}[upper=uppercol,lower=lowercol,shadow=false]{Example} #1 \end{beamerboxesrounded}
+  \SetDefaultRoundBoxColour
+}
+%
+\newcommand{\PhysHomework}[2]{
+  \setbeamercolor{uppercol}{fg=white, bg=kRed}
+  \setbeamercolor{lowercol}{fg=black, bg=kRed!20}
+  \begin{beamerboxesrounded}[upper=uppercol,lower=lowercol,shadow=false]{Homework} #1 \only<2> {#2}\end{beamerboxesrounded}
+  \SetDefaultRoundBoxColour
+}
+%
+\newcommand{\PhysWorkedExample}[3]{
+  \setbeamercolor{uppercol}{fg=white, bg=kRed}
+  \setbeamercolor{lowercol}{fg=black, bg=kRed!20}
+  \begin{beamerboxesrounded}[upper=uppercol,lower=lowercol,shadow=false]{\scriptsize#1}  \scriptsize#2 \only<2> {\scriptsize#3}\end{beamerboxesrounded}
+  \SetDefaultRoundBoxColour
+}
+%
+\newcommand{\PhysWorkedExampleCont}[3]{
+  \setbeamercolor{uppercol}{fg=white, bg=kRed}
+  \setbeamercolor{lowercol}{fg=black, bg=kRed!20}
+  \begin{beamerboxesrounded}[upper=uppercol,lower=lowercol,shadow=false]{\scriptsize#1}  \scriptsize#2 {\scriptsize#3}\end{beamerboxesrounded}
+  \SetDefaultRoundBoxColour
+}
+%
+\newcommand{\SetDefaultRoundBoxColour}{
+  \setbeamercolor{uppercol}{fg=white, bg=kBlue}
+  \setbeamercolor{lowercol}{fg=black, bg=kBlue!20}
+}
+%
+\newcommand{\BoxEq}[2]{
+ \setbeamercolor{uppercol}{fg=white, bg=#1}
+  \setbeamercolor{lowercol}{fg=black, bg=#1!20}
+  \begin{beamerboxesrounded}[upper=uppercol,lower=lowercol,shadow=false]{}#2\end{beamerboxesrounded}
+  \SetDefaultRoundBoxColour
+}
+
+%\newcommand{\MyHRef}[3]{\setbeamercolor{alerted text}{fg=black,bg=#3}\alert{\href{#1}{#2}} }
+%\newcommand{\MyHRef}[2]{\setbeamercolor{alerted text}{fg=\MySectionColour,bg=white}\alert{\href{#1}{#2}}}
+\newcommand{\MyHRef}[2]{\setbeamercolor{alerted text}{fg=\MySectionColour,bg=white}\alert{\href{#1}{\textbf{#2}}}}
+\newcommand{\HtmlLink}[1]{\href{#1}{\HighLight{website}}\xspace}
+\newcommand{\EqLine}[1]{ \visible<+->{#1}\\}
+\newcommand{\Eq}[1]{\EqLine{#1}}
+\newcommand{\EEq}[1]{\EEqLine{#1}}
+\newcommand{\EEqLine}[1]{\visible<+->{#1}}
+\newcommand{\TextLine}[1]{\visible<+->{#1}}
+\newcommand<>{\mycolorbox}[3][white]{{%
+    % #1 = default color when overlay specification is not fulfilled (default: white)
+    % #2 = color when overlay specification is fulfilled
+    % #3 = text to be displayed
+    % #4 = the actual overlay specification
+    \def\mycolor{#1}%
+    \only#4{\def\mycolor{#2}}%
+    \colorbox{\mycolor}{#3}%
+}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Enumerate Customisations (TikZ)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{ \node[circle,ball color=kBlue§, shade,  color=white,inner sep=1.2pt] (char) {\tiny #1};}}
+\newcommand*\rounded[1]{\tikz[baseline=(char.base)]{ \node[draw=none,ball color=kBlue, shade,  color=white, rounded corners=3.5pt, inner sep=2.5pt] (char) {\scriptsize #1};}}
+\newcommand*{\ballref}[1]{%
+    \begin{pgfpicture}{-1ex}{-0.65ex}{1ex}{1ex}
+    \usebeamercolor[fg]{item projected}
+    {\pgftransformscale{1.75}\pgftext{\normalsize\pgfuseshading{bigsphere}}}
+    {\pgftransformshift{\pgfpoint{0pt}{0.5pt}}
+      \pgftext{\usebeamerfont*{item projected}\ref{#1}}}
+\end{pgfpicture}}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Phase-2 (TTI WG) Shortcuts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\CaloTau}[1]{\TextColour{kBlack}{#1}}
+\newcommand{\TkTauFromCalo}[1]{\TextColour{kRed}{#1}}
+\newcommand{\TkEmTau}[1]{\TextColour{kGreen}{#1}}
+
+\newcommand{\Calo}[1]{\TextColour{kRed}{#1}}
+\newcommand{\Tk}[1]{\TextColour{kvLightBlue}{#1}}
+\newcommand{\VtxIso}[1]{\TextColour{kGreen}{#1}}
+\newcommand{\RelIso}[1]{\TextColour{kPurple}{#1}}
+\newcommand{\RateRef}[1]{\TextColour{kGray}{#1}}
+\newcommand{\threshCalo}[1]{\TextColour{kRed}{$\eT = $ #1~$\GeV$}}
+\newcommand{\threshTk}[1]{\TextColour{kvLightBlue}{$\eT = $ #1~$\GeV$}}
+\newcommand{\threshVtxIso}[1]{\TextColour{kGreen}{$\eT = $ #1~$\GeV$}}
+\newcommand{\threshRelIso}[1]{\TextColour{kPurple}{$\eT = $ #1~$\GeV$}}
+\newcommand{\Vals}[3]{ \textcolor{kRed}{#1} \,\, \textcolor{kGreen}{#2} \,\, \textcolor{kBlue}{#3} }
+\newcommand{\Highlight}[1]{\tikz\node[rectangle, fill=kOrange, inner sep=0.2mm]{#1};}
+
+\newcommand{\SSModules}[1]{\TextColour{kRed}{#1}}
+\newcommand{\PSModules}[1]{\TextColour{kBlue}{#1}}
+\newcommand{\PixModules}[1]{\TextColour{kPurple}{#1}}
+
+\newcommand{\HitPatternSeven}{\textcolor{red}{L1 + L2 + L3}}
+\newcommand{\HitPatternEleven}{\textcolor{violet}{L1 + L2 + D1}}
+\newcommand{\HitPatternThirteen}{\textcolor{pink}{L1 + L3 + D1}}
+\newcommand{\HitPatternFourteen}{\textcolor{black}{L2 + L3 + D1}}
+\newcommand{\HitPatternNineteen}{\textcolor{teal}{L1 + L2 + D1}}
+\newcommand{\HitPatternFifteen}{\textcolor{orange}{L1 + L2 + L3 + D1}}
+\newcommand{\HitPatternTwentryThree}{\textcolor{blue}{L1 + L2 + L3 + D2}}
+\newcommand{\HitPatternFiftyOne}{\textcolor{green}{L1 + L2 + D2 + D3}}
+
+
+
+
+
+\def\overlaynode<#1>#2;{
+        \gdef\stacknodecommonpart{#2}
+        \pgfkeys{/typeset node/.list={#1}}
+}
+
+\pgfkeys{
+    /typeset node/.code={
+        \edef\pgf@marshal{\noexpand\node[#1]\stacknodecommonpart;}
+        \pgf@marshal
+    }
+}

@@ -1,0 +1,323 @@
+\newcommand{\backupbegin}{
+   \newcounter{finalframe}
+   \setcounter{finalframe}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+   \setcounter{framenumber}{\value{finalframe}}
+}
+\setbeamercolor{background canvas}{bg=white}
+\begin{frame}[noframenumbering]{}
+  \begin{center}
+    \Huge \textbf{BACKUP}
+  \end{center}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamercolor{background canvas}{bg=white}
+%\setcounter{page}{1}
+\backupbegin
+
+
+\MySection{EXO-21-002}\MySubSection{\textcolor{kRed}{Model-independent selections}}
+\Slide{t}{
+
+  %Model-independent event categorization based on
+  $ \ $ \textbf{\textcolor{kBlue}{Fundamental scheme}}
+
+  \begin{itemize}
+  \item Categories \textbf{\textcolor{kGreen}{A1-G1}} based on \FundamentalCatTag
+    \begin{itemize}
+    \item Charge and flavor combination (OSSF$_{n}$)
+    \item Mass (BelowZ, OnZ, AboveZ)
+    \item $M_{T}$ or minimum $\ell$ \pT %(\pT/$M_{T}$)    
+    \end{itemize}
+  \end{itemize}
+
+  \vspace{-0.75cm}
+  
+  \oneFigColumns{CMS-EXO-21-002_Table_002.pdf}{}{1.0}
+
+  \vspace{0.1cm}
+  
+  \begin{itemize}
+  \item \textcolor{kRed}{Final discriminant: $L_{T}$+$p_{T}^{miss}$ or $S_{T}$}
+  \end{itemize}
+
+
+  \vspace{0.25cm}
+  
+  $ \ $ \textbf{\textcolor{kBlue}{Advanced scheme}}
+
+  \begin{itemize}
+  \item Further categorization based on $N_{b}$, \HT, $p_{T}^{miss}$  \AdvancedCatTag
+  \item \textcolor{kRed}{Final discriminant: $S_{T}$}
+  \end{itemize}
+}
+
+\MySection{Model-dependent selections}
+\Slide{t}{
+
+   $ \ $ \textbf{\textcolor{kBlue}{Model-dependent SR defined using MVA}}
+
+  \begin{itemize}
+  \item BDTs discriminate specific signal from SM background
+  \item Multiple BDT trainings per year and category:
+    \begin{itemize}
+    \item[*] Vector-like leptons (VVL): 3 mass ranges (L, M, H)
+    \item[*] Type-III seesaw (SS): 3 mass ranges $\times$ 2 flavor
+      scenarios %($\mathcal{B}_{e}$ = $\mathcal{B}_{\mu}$ = $\mathcal{B}_{\tau}$, $\mathcal{B}_{\tau}$ = 1)
+    \item[*] Leptoquarks (LQ): 3 mass ranges $\times$ 2 flavor
+      scenarios %($\mathcal{B}_{\tau}$ = 1, $\mathcal{B}_{e}$ + $\mathcal{B}_{\mu}$ = 1)
+    \end{itemize}
+  \end{itemize}
+
+  \oneFigColumns{CMS-EXO-21-002_Figure_015-a.pdf}{\normalsize \textcolor{kRed}{SS-H  $\mathcal{B}_{e}$ = $\mathcal{B}_{\mu}$ = $\mathcal{B}_{\tau}$} - regions: [3L, 2L1T, 1L1T]}{1.0}
+}
+
+
+\MySection{EXO-21-002}\MySubSection{\textcolor{kRed}{Results}}
+
+\Slide{t}{
+
+  No significant deviation from SM obseerved
+
+  \begin{itemize}
+  \item Limits are interpreted in various BSM models
+  \item Model-dependent SR also defined using BDT
+  \item Best expected limits are used between the cut-based and MVA-based methods
+  \end{itemize}
+ 
+  \threeFigColumnsBig
+      {CMS-EXO-21-002_Figure_027-a.pdf}{Leptoquark: $\mathcal{B}_{e}$ = 1}
+      {CMS-EXO-21-002_Figure_027-b.pdf}{Leptoquark: $\mathcal{B}_{\mu}$ = 1}
+      {CMS-EXO-21-002_Figure_027-c.pdf}{Leptoquark: $\mathcal{B}_{\tau}$ = 1}
+
+      \vspace{0.2cm}
+      
+   \begin{itemize}
+   %\item SS, VVL doublet: most stringent to date constraints
+   %\item VVL singlet: First LHC limits
+   \item LQ: Constraints compete ATLAS results
+   \end{itemize}
+}
+
+\MySection{Introduction}
+\Slide{t}{
+  
+  Leptoquarks motivated by experimental observations
+
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \oneFigColumns{LFV.png}{Lepton flavor violation in B-meson physics}{1.0}
+
+      \vspace{-0.35cm}
+      
+      \begingroup
+      \scriptsize
+      \begin{equation*}
+        \ \ \mathcal{R}(D^{*}) \equiv \frac{\mathcal{B}(B^{0}\rightarrow D^{*-}\tau^{+}\nu_{\tau})}{\mathcal{B}(B^{0}\rightarrow D^{*-}\mu^{+}\nu_{\mu})} \ \ \ 
+        \mathcal{R}(D) \equiv \frac{\mathcal{B}(B^{0}\rightarrow D\tau^{+}\nu_{\tau})}{\mathcal{B}(B^{0}\rightarrow D\mu^{+}\nu_{\mu})}
+      \end{equation*}
+      \endgroup
+
+      \vspace{-0.75cm}
+
+      \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+          \oneFigColumns{BmesonW.png}{}{0.95}
+        \end{column}
+        \begin{column}{0.52\textwidth}
+          \oneFigColumns{BmesonLQ.png}{}{1.0}
+        \end{column}
+      \end{columns}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \oneFigColumns{muong2.png}{Muon anomalous magnetic moment}{1.0}
+      \oneFigColumns{feynmanG2LQ.png}{}{0.7}
+    \end{column}
+  \end{columns}
+    
+}
+
+
+\MySection{CMS and ATLAS results}\MySubSection{\textcolor{kRed}{LQ
+    coupling to t-quarks}}
+
+\Slide{t}{
+
+  \vspace{-0.2cm}
+  
+  \twoColumns
+      {
+        \small
+        %\center{$te^{-}\bar{t}e^{+}$/$t\mu^{-}\bar{t}\mu^{+}$} % ATLAS
+        %\href{https://arxiv.org/abs/2306.17642}{arxiv 2306.17642}, \href{https://link.springer.com/article/10.1140/epjc/s10052-021-09009-8}{Eur. Phys. J. C 81 (2021) 313}
+
+        \oneFigColumns{ATLAS_tete.png}{\href{https://arxiv.org/abs/2306.17642}{ arxiv 2306.17642}\vspace{-0.15cm}}{0.65}
+
+        \vspace{-0.25cm}
+        \begin{itemize}
+          \footnotesize
+        %\item 2LOS: $m_{LQ}$~>~1480/1470\GeV
+        \item $te~te$/$t\mu~t\mu$: $m_{LQ}$~>~1.58/1.59~\TeV
+        \end{itemize}
+      }
+      {
+        \small
+        %\center{$t~\tau^{-}\bar{t}~\tau^{+}$} % ATLAS
+
+        \oneFigColumns{ATLAS_ttatta}{\href{https://link.springer.com/article/10.1007/JHEP06(2021)179}{JHEP 06 (2021) 179}\vspace{-0.15cm}}{0.65}
+
+        \vspace{-0.25cm}        
+        \begin{itemize}
+          \footnotesize
+        \item $t\tau~t\tau$: $m_{LQ}$~>~1.43~\TeV
+        \end{itemize}
+      }
+
+      \vspace{0.5cm}
+      \twoColumns
+          {
+            \small
+            %\center{$t~\tau\nu$/$t~\tau\nu~b$} % CMS
+            \oneFigColumns{CMS-EXO-19-015_Figure_003-a.pdf}{\href{https://www.sciencedirect.com/science/article/pii/S0370269321003865?via\%3Dihub}{PLB 819 (2021) 136446}\vspace{-0.15cm}}{0.75}
+            \vspace{-0.15cm}
+            \begin{itemize}
+              \footnotesize
+            \item $t \tau \nu (b)$: $m_{LQ}$~>~980~\GeV %(pair+single prod.)
+            \end{itemize}
+          }
+          {
+            \vspace{-0.25cm}
+            \small
+            %\center{$te^{-}\bar{t}e^{+}$/$t\mu^{-}\bar{t}\mu^{+}$/$t~\tau^{-}\bar{t}~\tau^{+}$} % CMS
+            \oneFigColumns{CMS-EXO-21-002_Figure_027-c.pdf}{\href{https://journals.aps.org/prd/abstract/10.1103/PhysRevD.105.112007}{PRD 105 (2022) 112007 }\vspace{-0.15cm}}{0.65}
+            %\vspace{-0.15cm}
+            %\begin{itemize}
+            %  \footnotesize
+            %\item $te~te$/$t\mu~t\mu$/$t\tau~t\tau$: $m_{LQ}$~>~1.34/1.42/1.12~\TeV
+            %\end{itemize}
+            \footnotesize
+            \textcolor{oxfordblue}{$\blacktriangleright$} $te~te$/$t\mu~t\mu$/$t\tau~t\tau$: $m_{LQ}$~>~1.34/1.42/1.12~\TeV
+          }
+}
+
+\MySection{Object selections}
+\MySubSection{\textcolor{kRed}{2018}}
+\Slide{t}{
+
+  \begin{itemize}
+    \small
+  \item Trigger
+  \item[$\mu$] \texttt{HLT\_IsoMu24 || HLT\_IsoTkMu24 ||
+    HLT\_Mu50 || HLT\_TkMu50}
+  \item[$e$] \texttt{HLT\_Ele32\_WPTight\_Gsf ||
+    HLT\_Ele50\_CaloIdVT\_GsfTrkIdT\_PFJet165 ||
+    HLT\_Ele115\_CaloIdVT\_GsfTrkIdT || HLT\_Photon200}
+
+  \item Muons
+    \begin{itemize}
+      \small
+    \item $|\eta|$~<~2.4, \pT~>~10~GeV
+    \item cutBasedID (medium), pfRelIso (tight), jetPtRatio < 1.6
+    \item sip3D < 7, JetDeepFlavorB < 0.55, |dxy| < 0.05, |dz| < 0.1
+    \end{itemize}
+
+  \item Electrons
+    \begin{itemize}
+      \small
+    \item $|\eta|$~<~2.4, \pT~>~10~GeV
+    \item cutBasedID (medium), pfRelIso (tight), jetPtRatio < 1.6
+    \item sip3D < 7, JetDeepFlavorB < 0.55, |dxy| < 0.1, |dz| < 0.2
+    \end{itemize}    
+  \end{itemize}
+
+  \vspace{-0.1cm}
+  
+  \twoColumnsAsymOp
+      {
+        \begin{itemize}
+          \small
+        \item AK4 jets
+          \begin{itemize}
+            \small
+          \item $|\eta|$~<~2.4, \pT~>~30~GeV
+          \item ID tight \& tightLepVeto
+          \item PUID tight
+          \item b-tag: DeepJet medium WP
+          \item $\Delta R(jet, \ell)$~>~0.4
+          \end{itemize}
+        \end{itemize}
+      }
+      {
+        \begin{itemize}
+          \small
+        \item AK8 jets
+          %\begin{itemize}
+          %  \small
+        \item[] \textcolor{oxfordblue}{$\blacktriangleright$}
+          $|\eta|$~<~2.4, \pT~>~200~GeV, ID tight
+        \item[] \textcolor{oxfordblue}{$\blacktriangleright$} t-tag:
+          \pT> 400 GeV, pnTvsQCD (loose)
+        \item[] \textcolor{oxfordblue}{$\blacktriangleright$} W-tag:
+          \pT> 200 GeV, pnWvsQCD (loose), NOT t-tagged
+          %\end{itemize}
+        \end{itemize}
+      }
+}
+
+\MySection{2T, 1T1W, 2W}\MySubSection{\large \textcolor{kRed}{\ST}}
+\Slide{t}{
+  \vspace{-0.2cm}
+  \threeColumns
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS1.pdf}{1.0}{11}}
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS2.pdf}{1.0}{11}}
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS3.pdf}{1.0}{11}}
+  \vspace{+0.1cm}
+  \threeColumns
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS4.pdf}{1.0}{11}}
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS5.pdf}{1.0}{11}}
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS6.pdf}{1.0}{11}}
+  \vspace{+0.1cm}
+  \threeColumns
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS7.pdf}{1.0}{11}}
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS8.pdf}{1.0}{11}}
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS9.pdf}{1.0}{11}}  
+}
+\MySection{1T0W}\MySubSection{\large \textcolor{kRed}{\ST}}
+\Slide{t}{
+  \threeColumns
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS10.pdf}{1.0}{11}}
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS11.pdf}{1.0}{11}}
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS12.pdf}{1.0}{11}}
+  \vspace{+0.1cm}
+  \threeColumns
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS13.pdf}{1.0}{11}}
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS14.pdf}{1.0}{11}}
+  {}
+}
+\MySection{0T1W}\MySubSection{\large \textcolor{kRed}{\ST}}
+\Slide{t}{
+  \threeColumns
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS15.pdf}{1.0}{11}}
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS16.pdf}{1.0}{11}}
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS17.pdf}{1.0}{11}}
+  \vspace{+0.1cm}
+  \threeColumns
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS18.pdf}{1.0}{11}}
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS19.pdf}{1.0}{11}}
+  {}
+}
+\MySection{0T0W}\MySubSection{\large \textcolor{kRed}{\ST}}
+\Slide{t}{
+  \threeColumns
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS20.pdf}{1.0}{11}}
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS21.pdf}{1.0}{11}}
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS22.pdf}{1.0}{11}}
+  \vspace{+0.1cm}
+  \threeColumns
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS23.pdf}{1.0}{11}}
+  {\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS24.pdf}{1.0}{11}}
+  {}%\oneFigRUStyle{plots_LQ_2018_24Jul2024/runPlotter_debug_2018_LS25.pdf}{1.0}{11}}
+}
+
+\backupend

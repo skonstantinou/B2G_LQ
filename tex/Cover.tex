@@ -1,0 +1,27 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author ........ : Alexandros X. Attikis
+%% Institute ..... : University of Cyprus (UCY)
+%% e-Mail ........ : attikis@cern.ch
+%% Comments ...... : 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newlength\logoHeight
+\setlength\logoHeight{1.5cm}   
+
+\titlegraphic{
+  \vspace{-0.5cm}
+  \begin{columns}[T]
+    \column{1.0\textwidth}
+    \begin{center}
+      \begin{figure}
+        \iftoggle{CERNLogo}{\href{http://cms.web.cern.ch}{\includegraphics[height=\logoHeight,keepaspectratio]{./figures/logos/logo_cern2.pdf}}}{}
+        \iftoggle{RULogo}{\href{https://www.rutgers.edu}{\includegraphics[height=\logoHeight,keepaspectratio]{./figures/logos/logo_rutgers_v2.png}}}{}
+        \iftoggle{UCYLogo}{\href{http://www.ucy.ac.cy/en/}{\includegraphics[height=\logoHeight,keepaspectratio]{./figures/logos/logo_ucy2.pdf}}}{}
+        \iftoggle{CMSLogo}{\href{http://cern.ch}{\includegraphics[height=\logoHeight,keepaspectratio]{./figures/logos/logo_cms4.pdf}}}{}
+        %\iftoggle{HIPLogo}{\href{http://www.hip.fi}{\includegraphics[height=\logoHeight,keepaspectratio]{./figures/logos/logo_hip1.png}}}{}
+        %\iftoggle{HIPLogo}{\href{http://www.hip.fi}{\includegraphics[height=\logoHeight,keepaspectratio]{./figures/logos/logo_hip2.pdf}}}{}
+        %\iftoggle{HIPLogo}{\href{http://www.hip.fi}{\includegraphics[height=\logoHeight,keepaspectratio]{./figures/logos/logo_hip3.pdf}}}{}
+      \end{figure}
+      \end{center}
+  \end{columns}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
