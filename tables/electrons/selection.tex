@@ -1,0 +1,28 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author ........ : Alexandros X. Attikis
+%% Institute ..... : University of Cyprus (UCY)
+%% e-Mail ........ : attikis@cern.ch
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\footnotesize
+Electron selection criteria:\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\arraystretch}{1.0}
+\begin{table}
+  \begin{center}
+    \label{tab:electronSelection}
+    \begin{tabular}{c c l c l}
+      \hline
+      & Variable &  & Value & Description \\
+      \hline
+      % \multicolumn{5}{c}{\ElectronCollection}\\
+      1 & N            & $\leq$ & 0                  & \electronCollection \\ 
+      2 & ID           & $==$   & 1                  & \electronID \\
+      3 & \pT          & $\geq$ & \electronPtCut     & \\
+      4 & $\abs{\eta}$ & $\leq$ & \electronEtaCut    & \\      
+      5 & Rel-Isol     & $\leq$ & \electronIsolationValue & \electronIsolation \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+\renewcommand{\arraystretch}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

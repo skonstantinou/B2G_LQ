@@ -1,0 +1,151 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author ............: Alexandros X. Attikis
+%% Institute .........: University of Cyprus (UCY)
+%% e-Mail ............: attikis@cern.ch
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pdfminorversion=6
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Customisations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\MyTitle{Searches for Leptoquarks decaying to top quarks in final states with leptons and boosted jets}
+\def\MySubtitle{B2G General meeting}
+%\def\MyTitle{Event selections for 2017 analysis}
+%\def\MySubtitle{ }%\texorpdfstring{Ph.D. thesis defence}}
+%\def\MyTitle{Corrections for uGMT muons}
+%\def\MySubtitle{ \texorpdfstring{\boldmath{40MHz Scouting}}}
+\def\MyName{Sotiroulla Konstantinou}
+
+\def\MyAuthors{\small%ordered alphabetically
+  \textbf{Sotiroulla Konstantinou}\inst{1}, Philip Meltzer\inst{1},%\newline
+  Halil Saka\inst{2}, \newline Sunil Somalwar\inst{1},
+  Anton Stepennov\inst{2},  Scott Thomas\inst{1}, Jay Vora\inst{1} 
+}
+%\def\MyInstitutes{\ac{UCY}}
+\def\MyInstitutes{\scriptsize \inst{1} Rutgers University \hspace{+0.1cm} \inst{2} University of Cyprus}
+%\def\MyInstitutes{\ac{UCY}}
+%\def\MyInstitutes{Rutgers University}
+%\def\MyDate{\longdate\today}
+\def\MyDate{\vspace{-0.2cm}Tuesday, 6$^{th}$ August 2024}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define the document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt,usenames,dvipsnames,professionalfonts,compact]{beamer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Include packages & definitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{./tex/Packages.tex}
+\input{./tex/BeamerCommands.tex}
+\input{./tex/LatexCommands.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Booleans and Toggles
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Declarations
+\newbool{Navigation}
+\newbool{SubsectionBullets}
+\newbool{Footer}
+\newbool{Notes}
+\newbool{GradientBackground}
+%
+\newtoggle{CERNLogo}
+\newtoggle{CMSLogo}
+\newtoggle{HIPLogo}
+\newtoggle{UCYLogo}
+\newtoggle{RULogo}
+\newtoggle{Outline}
+\newtoggle{Main}
+\newtoggle{Acknowledgements}
+\newtoggle{Backup}
+\newtoggle{Bibliography}
+
+% Assignments
+\global\boolfalse{Navigation}
+\global\boolfalse{SubsectionBullets}
+%\global\booltrue{SubsectionBullets}
+\global\booltrue{Footer}
+\global\boolfalse{Notes}
+\global\boolfalse{GradientBackground}
+%
+\toggletrue{CERNLogo}
+\toggletrue{CMSLogo}
+\toggletrue{UCYLogo}
+\toggletrue{RULogo}
+%\toggletrue{HIPLogo} 
+\togglefalse{HIPLogo} 
+\togglefalse{Outline}
+%\toggletrue{Outline}
+\toggletrue{Main}
+%\togglefalse{Main}
+\togglefalse{Acknowledgements}
+\toggletrue{Backup}
+%\togglefalse{Backup}
+\togglefalse{Bibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Customise Look
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\CustomiseColours
+    {beaublue}        % \MyMainColour %floralwhite
+    {oxfordblue}      % \MySectionColour %indianred %oxfordblue
+    {beaublue}        % \MySubsectionColour %floralwhite %wildblueyonder %aliceblue
+    {kHPlusBlack}     % \MyMainTextColour
+    %{kHPlusWhite}     % \MySectionTextColour
+    {oxfordblue}      % \MySectionTextColour
+    {kHPlusBlack}     % \MySubsectionTextColour
+
+\CustomiseTheme
+    {professionalfonts,compress} % Theme options: Different themes support different options
+    {Dresden}                    % Theme name: default, Dresden, Frankfurt, Madrid, ...
+    {triangle}                       % bullet style for "itemize" : default, triangle, circle, square, ball, $\int$, ...
+    {\MyName}                    % Left footer entry 
+    {\shortdate\today}           % Right footer entry
+    {yellow}
+    {red}
+      
+\CustomiseLayout
+    {+0.00cm}   % \hoffset
+    {-1.55cm}   % \oddsidemargin
+    {+0.50cm}   % \headheight
+    {+8.00cm}   % \textheight
+    {+12.80cm}  % \textwidth
+    {+0.00cm}   % \footskip
+    {+0.00cm}   % \voffset
+    {-2.54cm}   % \topmargin
+    {+0.00cm}   % \headsep
+
+\CustomiseTextMargins % Affects cover page title
+    {0.0cm} % Left
+    {0.0cm} % Right
+
+\CustomiseTables{0.03cm}
+
+\CustomiseDateFormat{/}    % for \today customisation
+
+\CustomiseLineSpacing{1.2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%\pagestyle{empty}
+\thispagestyle{empty}
+\input{./tex/Cover.tex}
+%\pagestyle{plain}
+%\input{./tex/Acronyms.tex}
+%
+\begin{frame}[noframenumbering]{}
+  \MakeTitlePage{\MyTitle}{\MySubtitle}{\MyAuthors}{\MyInstitutes}{\MyDate}
+\end{frame}
+%
+\iftoggle{Outline}{\MySectionWithFileNoTOC{Outline}{Outline.tex}}{}
+%
+\setcounter{page}{1}
+\iftoggle{Main}{\input{./tex/Sections.tex}}{}
+\thispagestyle{empty}
+\iftoggle{Acknowledgements}{\MySectionWithFile{Acknowledgements}{Acknowledgements.tex}}{}
+\iftoggle{Bibliography}{\MySectionWithFile{Bibliography}{Bibliography.tex}}{}
+\iftoggle{Backup}{\MySectionWithFileNoTOC{}{Backup.tex}}{}
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

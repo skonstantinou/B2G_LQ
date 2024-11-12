@@ -1,0 +1,54 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author ........ : Alexandros X. Attikis
+%% Institute ..... : University of Cyprus (UCY)
+%% e-Mail ........ : attikis@cern.ch
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+  \resizebox{0.85\linewidth}{!}{
+    \begin{tabular}{r l l}
+    \hline
+    $\#$          & \multicolumn{1}{c}{Input variables} & \multicolumn{1}{c}{Description} \\
+    \hline
+    1             & \mTop                               & Trijet mass \\
+    2             & \pT \deltaRSub{t}                   & Product of trijet \pT with \deltaR between dijet and \btagged jet \\
+    3             & \mW                                 & Dijet mass \\
+    4             & \pT \deltaRSub{\bW{\pm}}            & Product of dijet \pT with the \deltaR between the two subjets \\
+    5             & Leading jet CSV                     & CSV discriminant of the leading jet in the dijet system \\
+    6             & Subleading jet CSV                  & CSV discriminant of the subleading jet in the dijet system \\
+    7             & \btagged jet CSV                    & CSV discriminator of the \btagged jet ($>0.8484$)  \\
+    8             & \sMass{b}                           & \btagged jet mass \\
+    9             & \sMass{\left(b,~\jetLdg\right)}     & Mass of the \btagged jet and leading jet system \\
+    10            & \sMass{\left(b,~\jetSubLdg\right)}  & Mass of the \btagged jet and the subleading jet system \\
+    11            & Leading jet CvsL                    & Charm-to-light discriminator of the leading jet in the dijet system \\
+    12            & Subleading jet CvsL                 & Charm-to-light discriminator of the subleading jet in the dijet system \\
+    13            & Soft Drop n2                        & Declustering algorithm over the two \bW{\pm} subjets \softDrop \\
+    14            & Leading jet \pTD                    & Fragmentation function of the leading jet in the dijet system  \\
+    15            & Subleading jet \pTD                 & Fragmentation function of the subleading jet in the dijet system  \\
+    16            & Leading jet axis2                   & Jet shape variable describing the leading jet's short axis  \\
+    17            & Subleading jet axis2                & Jet shape variable describing the subleading jet's short axis  \\
+    18            & Leading jet mult                    & Multiplicity of jet constituents of \jetLdg in dijet system  \\
+    19            & Subleading jet mult                 & Multiplicity of jet constituents of \jetSubLdg in dijet system  \\ 
+    \hline
+  \end{tabular}}
+\end{center}
+
+
+%  \begin{center} 
+%    %\begin{tabularx}{0.83\textwidth}{l r c}
+%    \resizebox{0.9\linewidth}{!}{%https://tex.stackexchange.com/questions/38177/including-large-tables-in-a-beamer-frame
+%      \begin{tabular}{l r l r}
+%        \hline
+%        \multicolumn{1}{c}{Dataset} & \multicolumn{2}{c}{Luminosity} & \multicolumn{1}{c}{Comment} \\
+%        \hline
+%        JetHT\_Run2016B\_18Apr2017\_ver2\_v1\_273150\_275376$^{\dagger}$  & 5747.588 &  \sInvPb &  \\
+%        JetHT\_Run2016C\_18Apr2017\_v1\_275420\_276283$^{\dagger}$        & 2573.399 &  \sInvPb &  \\
+%        JetHT\_Run2016D\_18Apr2017\_v1\_276315\_276811$^{\dagger}$        & 4248.384 &  \sInvPb &  \\
+%        JetHT\_Run2016E\_18Apr2017\_v1\_276824\_277420$^{\dagger}$        & 4008.663 &  \sInvPb &  \\
+%        JetHT\_Run2016F\_18Apr2017\_v1\_277816\_278800$^{\dagger}$        & \textcolor{red}{2696.397} &  \sInvPb & \textcolor{kGreen}{2704.118} for 03Feb2017 \\
+%        JetHT\_Run2016F\_18Apr2017\_v1\_278801\_278808                   & 405.222  &  \sInvPb &  \\
+%        JetHT\_Run2016G\_18Apr2017\_v1\_278816\_280385                   & \textcolor{kRed}{7159.088}&  \sInvPb & \textcolor{kGreen}{7539.457} for 03Feb2017 \\
+%        JetHT\_Run2016H\_18Apr2017\_v1\_281613\_284044                   & \textcolor{kRed}{8331.040}&  \sInvPb & \textcolor{kGreen}{8605.689} for 03Feb2017 \\
+%        \hline
+%        JetHT\_Run2016B -- JetHT\_Run2016H &      \multicolumn{1}{r}{\textcolor{kRed}{35169.781}} & \sInvFb & \textcolor{kGreen}{35832.520} for 03Feb2017 \\
+%    \end{tabular}}
+%  \end{center}

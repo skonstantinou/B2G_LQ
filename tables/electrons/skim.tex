@@ -1,0 +1,33 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author ........ : Alexandros X. Attikis
+%% Institute ..... : University of Cyprus (UCY)
+%% e-Mail ........ : attikis@cern.ch
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\footnotesize
+%Electron skim criteria:\vspace{0.1cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\arraystretch}{1.0}
+\begin{center}
+  \resizebox{0.8\linewidth}{!}{%https://tex.stackexchange.com/questions/38177/including-large-tables-in-a-beamer-frame
+    %\begin{tabular}{ l r r}
+    %\begin{table}
+      %\begin{center}
+      \label{tab:electronSkim}
+    \begin{tabular}{c c l c l}
+      \hline
+      & Variable &  & Value & Description \\
+      \hline
+      % \multicolumn{5}{c}{\ElectronCollection}\\
+      1 & N            & $\leq$ & \ElectronNCut     & \ElectronCollection \\ 
+      2 & ID           & $==$   & 1                 & \ElectronID \\
+      3 & \pT          & $\geq$ & \ElectronPtCut    & \\
+      4 & $\abs{\eta}$ & $\leq$ & \ElectronEtaCut   & \\      
+      5 & Rel-Isol     & $\leq$ & \ElectronRelIsoEA &  \ElectronRhoSource \\
+      \hline
+    \end{tabular}
+    %\end{center}
+%\end{table}
+  }
+\end{center}
+\renewcommand{\arraystretch}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,58 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author ........ : Alexandros X. Attikis
+%% Institute ..... : University of Cyprus (UCY)
+%% e-Mail ........ : attikis@cern.ch
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+ \resizebox{0.90\linewidth}{!}{%https://tex.stackexchange.com/questions/38177/including-large-tables-in-a-beamer-frame
+  \begin{tabular}{l c c c c C c c c c}
+    \hline
+    \multicolumn{1}{c}{HLT Path} & \multicolumn{4}{c}{Calo-Jets} & &\multicolumn{4}{c}{PF-Jets} 
+    \\
+    & \HT & \pT & \bTags & CSV  && \HT & \pT & \bTags & CSV
+    \\
+    \hline
+    \texttt{HLT\_PFHT380\_SixPFJet32\_DoublePFBTagCSV\_2p2}   & 300  & 25  & 1  & 0.44  && \cellcolor{kGreen}380  & \cellcolor{kRed}32  & 2  & \cellcolor{kRed}0.75
+    \\                                                                                                                   
+    \texttt{HLT\_PFHT430\_SixPFJet40\_PFBTagCSV\_1p5}         & 300  & 35  & -  & -     && \cellcolor{kGreen}430  & 40  & 1  & \cellcolor{kRed}0.80 
+    \\                                                                                                                   
+    \texttt{HLT\_PFHT380\_SixPFJet32}                         & 300  & 25  & -  & -     && \cellcolor{kGreen}380  & \cellcolor{kRed}32  & -  & - 
+    \\                                                                                                                   
+    \texttt{HLT\_PFHT430\_SixPFJet40}                         & 300  & 35  & -  & -     && \cellcolor{kGreen}430  & 40  & -  & - 
+    \\
+    \hline
+  \end{tabular}
+  }
+\end{center}
+
+
+\begin{comment}
+\def\LOneSeeds{All unprescaled \texttt{L1\_HTTxxx} \& proposed seeds}
+%\def\LOneSeeds{All unprescaled \texttt{L1\_HTT*}}
+%\def\LOneSeeds{All unprescaled \texttt{L1\_HTTxxx} \& New L1 seeds}
+
+
+\begin{center}
+ \resizebox{0.95\linewidth}{!}{%https://tex.stackexchange.com/questions/38177/including-large-tables-in-a-beamer-frame
+  \begin{tabular}{l l c c c c C c c c c} %11
+    \hline
+    \multicolumn{1}{c}{L1 Seeds} & \multicolumn{1}{c}{HLT Path} & \multicolumn{4}{c}{Calo-Jets} & &\multicolumn{4}{c}{PF-Jets} 
+    \\
+    % \multicolumn{1}{c}{All unprescaled \texttt{L1\_HTTxxx} seeds \& New L1 seeds} & \HT & \pT & \bTags & CSV  && \HT & \pT & \bTags & CSV
+    & & \HT & \pT & \bTags & CSV  && \HT & \pT & \bTags & CSV
+    \\
+    \hline
+%    \multicolumn{1}{c}{All unprescaled \texttt{L1\_HTTxxx} seeds \& New L1 seeds} & \texttt{HLT\_PFHT380\_SixPFJet32\_DoublePFBTagCSV\_2p2}   & 300  & 25  & 1  & 0.44  & 380  & 32  & 2  & 0.75
+    \multicolumn{1}{c}{\LOneSeeds} & \texttt{HLT\_PFHT380\_SixPFJet32\_DoublePFBTagCSV\_2p2}   & 300  & 25  & 1  & 0.44  && \cellcolor{kGreen}380  & \cellcolor{kRed}32  & 2  & \cellcolor{kRed}0.75
+    \\                                                                                                                   
+    \multicolumn{1}{c}{\LOneSeeds} & \texttt{HLT\_PFHT430\_SixPFJet40\_PFBTagCSV\_1p5}         & 300  & 35  & -  & -     && \cellcolor{kGreen}430  & 40  & 1  & \cellcolor{kRed}0.80 
+    \\                                                                                                                   
+    \multicolumn{1}{c}{\LOneSeeds} & \texttt{HLT\_PFHT380\_SixPFJet32}                         & 300  & 25  & -  & -     && \cellcolor{kGreen}380  & \cellcolor{kRed}32  & -  & - 
+    \\                                                                                                                   
+    \multicolumn{1}{c}{\LOneSeeds} & \texttt{HLT\_PFHT430\_SixPFJet40}                         & 300  & 35  & -  & -     && \cellcolor{kGreen}430  & 40  & -  & - 
+    \\
+    \hline
+  \end{tabular}
+  }
+\end{center}
+\end{comment}

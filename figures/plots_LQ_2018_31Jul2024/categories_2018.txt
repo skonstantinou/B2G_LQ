@@ -1,0 +1,11 @@
+Summary for pyPlotterJob:  pset_SkimAnalysis_categories.py
+Analysis:  categories_2018 
+
+Global selection:  TrigAccept>0 && Event_IsTight>0 && PassMETFilters>0 && PassLumiJsonFilter>0 && LightLepton_N>0 
+
+Local selections: 
+ LS0:  ('1', 'All')
+ LS1:  ('nOnZ==0 && (OSSF_N == 0 || Event_BestMOSSF[0]>MZhigh__) && PassSelections', 'all categories')
+ LS2:  ('nOnZ==0 && (OSSF_N == 0 || Event_BestMOSSF[0]>MZhigh__) && PassSelections && Custom_ST > 500', 'all categories (ST > 500 GeV)')
+ LS3:  ('nOnZ==0 && (OSSF_N == 0 || Event_BestMOSSF[0]>MZhigh__) && PassSelections && Custom_ST > 1000', 'all categories (ST > 1000 GeV)')
+

@@ -1,0 +1,32 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author ........ : Alexandros X. Attikis
+%% Institute ..... : University of Cyprus (UCY)
+%% e-Mail ........ : attikis@cern.ch
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\footnotesize
+%\jetType selection criteria:\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\arraystretch}{1.0}
+\begin{center}
+  \resizebox{0.40\linewidth}{!}{%https://tex.stackexchange.com/questions/38177/including-large-tables-in-a-beamer-frame
+%\begin{table}
+%  \begin{center}
+    \label{tab:jetSelectioon}
+    \begin{tabular}{c c c l}
+      \hline
+      & Variable &  & Value \\
+      \hline
+      1 & N & \numberOfJetsCutDirection & \numberOfJetsCutValue \\
+      2 & \pT          & $\geq$ & \jetPtCut   \\
+      3 & $\abs{\eta}$ & $\leq$ & \jetEtaCut  \\
+      4 & jet-ID Discriminator   & $==$   & \jetIDDiscr  \\
+      %5 & jet-PUID Discriminator & $==$   & \jetPUIDDiscr  \\
+      \hline
+    \end{tabular}
+    }
+  \end{center}
+%\end{table}
+\renewcommand{\arraystretch}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

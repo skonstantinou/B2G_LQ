@@ -1,0 +1,35 @@
+Summary for pyPlotterJob:  pset_SkimAnalysis_categories.py
+Analysis:  debug_2018 
+
+Global selection:  TrigAccept>0&&Event_IsTight>0&&PassMETFilters>0&&PassLumiJsonFilter>0&&LightLepton_N>0 
+
+Local selections: 
+ LS0:  ('1', 'All')
+ LS1:  ('nOnZ==0 && PassSelections && Category==1', '2T, 1L')
+ LS2:  ('nOnZ==0 && PassSelections && Category==2', '2T, 2LOSSF')
+ LS3:  ('nOnZ==0 && PassSelections && Category==3', '2T, 2LOSDF')
+ LS4:  ('nOnZ==0 && PassSelections && Category==4', '1T1W, 1L')
+ LS5:  ('nOnZ==0 && PassSelections && Category==5', '1T1W, 2LOSSF')
+ LS6:  ('nOnZ==0 && PassSelections && Category==6', '1T1W, 2LOSDF')
+ LS7:  ('nOnZ==0 && PassSelections && Category==7', '2W, 1L')
+ LS8:  ('nOnZ==0 && PassSelections && Category==8', '2W, 2LOSSF')
+ LS9:  ('nOnZ==0 && PassSelections && Category==9', '2W, 2LOSDF')
+ LS10:  ('nOnZ==0 && PassSelections && Category==10', '1T0W, 1L')
+ LS11:  ('nOnZ==0 && PassSelections && Category==11', '1T0W, 2LOSSF')
+ LS12:  ('nOnZ==0 && PassSelections && Category==12', '1T0W, 2LOSDF')
+ LS13:  ('nOnZ==0 && PassSelections && Category==13', '1T0W, 2LSS')
+ LS14:  ('nOnZ==0 && PassSelections && Category==14', '1T0W, 3L')
+ LS15:  ('nOnZ==0 && PassSelections && Category==15', '0T1W, 1L')
+ LS16:  ('nOnZ==0 && PassSelections && Category==16', '0T1W, 2LOSSF')
+ LS17:  ('nOnZ==0 && PassSelections && Category==17', '0T1W, 2LOSDF')
+ LS18:  ('nOnZ==0 && PassSelections && Category==18', '0T1W, 2LSS')
+ LS19:  ('nOnZ==0 && PassSelections && Category==19', '0T1W, 3L')
+ LS20:  ('nOnZ==0 && PassSelections && Category==20', '0T0W, 1L')
+ LS21:  ('nOnZ==0 && PassSelections && Category==21', '0T0W, 2LOSSF')
+ LS22:  ('nOnZ==0 && PassSelections && Category==22', '0T0W, 2LOSDF')
+ LS23:  ('nOnZ==0 && PassSelections && Category==23', '0T0W, 2LSS')
+ LS24:  ('nOnZ==0 && PassSelections && Category==24', '0T0W, 3L')
+ LS25:  ('nOnZ==0 && PassSelections && Category==25', '0T0W, 4L')
+ LS26:  ('nOnZ==0 && PassSelections && Category==26', 'ELSE')
+ LS27:  ('PassTopSelections', 'all categories')
+

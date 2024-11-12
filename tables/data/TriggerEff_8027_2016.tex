@@ -1,0 +1,68 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author ........ : Alexandros X. Attikis
+%% Institute ..... : University of Cyprus (UCY)
+%% e-Mail ........ : attikis@cern.ch
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{itemize}
+% \item Run2 \MoriondTwentySeventeen re-digi-reco campaign for \hCMSSW{8\_0\_21} or later:
+% \end{itemize}
+
+%\def\cOne{\cellcolor{black!25}}
+\def\cOne{\rowcolor{black!25}}
+\def\SingleBTag{HLT\_PFHT450\_SixJet40\_BTagCSV\_p056}
+\def\DoubleBTag{HLT\_PFHT400\_SixJet30\_DoubleBTagCSV\_p056}
+\def\HltOR{\SingleBTag || \SingleBTag}
+\def\LOneDoubleOR{L1\_HTT280 OR L1\_HTT300}
+\def\LOneTripleOR{L1\_HTT280 OR L1\_HTT300 OR L1\_HTT320}
+
+\begin{center}
+  \resizebox{0.9\linewidth}{!}{
+    \begin{tabular}{ l c l l l l }
+      \hline
+      \multicolumn{1}{c}{L1 Seeds} & \multicolumn{1}{c}{HLT Path} & Menu  & Runs & \sLumi(\sInvFb) & Dataset
+      \\
+      \hline
+      %\multirow{4}{*}{\LOneDoubleOR} & \multirow{11}{*}{\HltOR} & \multirow{4}{*}{10e33} & 273150-275376  &  5.743      & Run2016B \\
+      \multirow{4}{*}{\LOneDoubleOR} &                          & \multirow{4}{*}{10e33} & 273150-275376  &  5.743      & Run2016B \\
+                                     &                          &                        & 275420-276283  &  2.573      & Run2016C \\
+                                     &                          &                        & 276315-276811  &  4.248      & Run2016D \\
+                                     &                          &                        & 276830-276837  &  -          & Run2016E \\
+      %\hline
+      \multirow{5}{*}{\LOneDoubleOR} &  \SingleBTag             & \multirow{5}{*}{15e33}  & 276864-277420  & -           & Run2016E \\
+                                     &      ||                  &                         & 277816-278800  &  2.696      & Run2016F \\
+                                     &   \DoubleBTag            &                         & 278801-278808  &  0.405      & Run2016F \\
+                                     &                          &                         & 278816-280385  &  6.301      & Run2016G \\
+                                     &                          &                         & 281207-282523  &  -          & Run2016H \\
+      %\hline
+      \multirow{2}{*}{\LOneTripleOR} &                          & \multirow{ 2}{*}{15e33} & 282567-284035  &             & Run2016H \\
+                                     &                          &                         & 284036-284068  &  0.210      & Run2016H \\
+      \hline
+    \end{tabular}}
+\end{center}
+
+
+
+%\begin{center}
+%  \resizebox{0.8\linewidth}{!}{
+%    \begin{tabular}{ l l l l l l }
+%      \hline
+%      L1 Seeds & HLT Path & Menu  & Runs & \sLumi(\sInvFb) & Dataset
+%      \\
+%      \hline
+%      \multirow{4}{*}{L1\_HTT280 OR L1\_HTT300}                       & \multirow{2}{*}{HLT\_PFHT400\_SixJet30\_DoubleBTagCSV\_p056} & \multirow{ 4}{*}{10e33} & 273150-275376  &  5.743      & Run2016B 
+%      \\
+%      &                                                               &                         & 275420-276283  &  2.573      & Run2016C \\
+%      & \multirow{2}{*}{HLT\_PFHT450\_SixJet40\_BTagCSV\_p056}  &                         & 276315-276811  &  4.248      & Run2016D \\
+%      &                                                         &                         & 276830-276837  &  -          & Run2016E \\
+%      \hline
+%      \multirow{5}{*}{L1\_HTT280 OR L1\_HTT300}                       &                         & \multirow{5}{*}{15e33} & 276864-277420  & - & Run2016E \\
+%      & \multirow{3}{*}{HLT\_PFHT400\_SixJet30\_DoubleBTagCSV\_p056}  &                         & 277816-278800  &  2.696      & Run2016F \\
+%      &                                                               &                         & 278801-278808  &  0.405      & Run2016F \\
+%      & \multirow{2}{*}{HLT\_PFHT450\_SixJet40\_BTagCSV\_p056}        &                         & 278816-280385  &  6.301      & Run2016G \\
+%      &                                                               &                         & 281207-282523  &  -          & Run2016H \\
+%      \hline
+%      \multirow{2}{*}{L1\_HTT280 OR L1\_HTT300 OR L1\_HTT320}         & HLT\_PFHT400\_SixJet30\_DoubleBTagCSV\_p056 & \multirow{ 2}{*}{15e33} & 282567-284035  &             & Run2016H \\
+%                                                                      & HLT\_PFHT450\_SixJet40\_BTagCSV\_p056       &                         & 284036-284068  &  0.210      & Run2016H \\
+%      \hline
+%    \end{tabular}}
+%\end{center}

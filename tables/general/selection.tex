@@ -1,0 +1,39 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author ........ : Alexandros X. Attikis
+%% Institute ..... : University of Cyprus (UCY)
+%% e-Mail ........ : attikis@cern.ch
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\footnotesize
+%General selection criteria:\\
+Events are selected using the trigger:
+\begin{itemize}
+\item \trigger
+\end{itemize}
+
+\vspace{0.2cm}
+The \acs{PV} with largest $\sum\limits_{i}^{\text{tracks}}\pTSubPow{i}{2}$ is selected.
+
+\vspace{0.2cm}
+%Data quality filtering :%\MET Filters selection criteria:
+Clean-up filters are applied on data events:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\arraystretch}{1.0}
+\begin{table}
+  \begin{center}
+    \label{tab:generalSelection}
+    \begin{tabular}{c c c c l}
+      \hline
+      & Variable &  & Value & Description \\
+      \hline
+      1 & \metFilterA & $==$   & 1  & \\
+      2 & \metFilterB & $==$   & 1  & noisy \acs{HCAL} \\
+      3 & \metFilterC & $==$   & 1  & noisy \acs{ECAL} crystals \\
+      4 & \metFilterD & $==$   & 1  & beam halo muons \\
+      5 & \metFilterE & $==$   & 1  & high-E in EE supercluster \\
+      6 & \metFilterF & $==$   & 1  & \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+\renewcommand{\arraystretch}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

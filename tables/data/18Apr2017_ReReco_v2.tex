@@ -1,0 +1,48 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author ........ : Alexandros X. Attikis
+%% Institute ..... : University of Cyprus (UCY)
+%% e-Mail ........ : attikis@cern.ch
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}%0
+\item The complete \PPCollisionsThirteenTeV dataset is used:
+  \begin{itemize}
+  \item LHC delivered 41.07 \sInvFb
+  \item CMS recorded 37.82 \sInvFb
+  \end{itemize}
+%\item The Run2016 \ReMiniAOD samples used: %(\CMSSW{8\_0\_26\_patch1}):
+\end{itemize}
+
+\begin{itemize}
+\item The Run2016 \LegacyReReco samples were used: %(\CMSSW{8\_0\_26\_patch1}):
+\end{itemize}
+\begin{center} 
+  %\begin{tabularx}{0.83\textwidth}{l r c}
+  \resizebox{0.9\linewidth}{!}{%https://tex.stackexchange.com/questions/38177/including-large-tables-in-a-beamer-frame
+    \begin{tabular}{l r l r}
+      \hline
+      %\multicolumn{1}{c}{Dataset} & \multicolumn{1}{c}{$\mathcal{L} = \int L \ dt$} & & Comment \\
+      \multicolumn{1}{c}{Dataset} & \multicolumn{2}{c}{Luminosity} & \multicolumn{1}{c}{Comment} \\
+      \hline
+      JetHT\_Run2016B\_18Apr2017\_ver2\_v1\_273150\_275376$^{\dagger}$  & 5747.588 &  \sInvPb &  \\
+      JetHT\_Run2016C\_18Apr2017\_v1\_275420\_276283$^{\dagger}$        & 2573.399 &  \sInvPb &  \\
+      JetHT\_Run2016D\_18Apr2017\_v1\_276315\_276811$^{\dagger}$        & 4248.384 &  \sInvPb &  \\
+      JetHT\_Run2016E\_18Apr2017\_v1\_276824\_277420$^{\dagger}$        & 4008.663 &  \sInvPb &  \\
+      JetHT\_Run2016F\_18Apr2017\_v1\_277816\_278800$^{\dagger}$        & \textcolor{red}{2696.397} &  \sInvPb & \textcolor{kGreen}{2704.118} for 03Feb2017 \\
+      JetHT\_Run2016F\_18Apr2017\_v1\_278801\_278808                   & 405.222  &  \sInvPb &  \\
+      JetHT\_Run2016G\_18Apr2017\_v1\_278816\_280385                   & \textcolor{kRed}{7159.088}&  \sInvPb & \textcolor{kGreen}{7539.457} for 03Feb2017 \\
+      JetHT\_Run2016H\_18Apr2017\_v1\_281613\_284044                   & \textcolor{kRed}{8331.040}&  \sInvPb & \textcolor{kGreen}{8605.689} for 03Feb2017 \\
+      \hline
+      JetHT\_Run2016B -- JetHT\_Run2016H &      \multicolumn{1}{r}{35169.781} & \sInvFb & \textcolor{kGreen}{35832.520} for 03Feb2017 \\
+  \end{tabular}}
+  %\footnote{^{\dagger} = \SiStripHitEffLoss}
+\end{center}
+
+\vspace{0.2cm}
+\begin{itemize}
+\item $^{\dagger}$ indicates runs affected by \SiStripHitEffLoss
+\item Have 662.739 \sInvPb\ \underline{less} than 03Feb2017
+\item Use 07Aug2017 legacy ReReco as soon as it is available
+\end{itemize}
+
+% 35832.52 - 35169.781 = 662.739
+% (2704.118-2696.397)+(7539.457-7159.088)+(8605.689-8331.040) = 662.739

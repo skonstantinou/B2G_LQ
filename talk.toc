@@ -1,0 +1,31 @@
+\babel@toc {english}{}\relax 
+\beamer@sectionintoc {1}{Introduction}{1}{0}{1}
+\beamer@sectionintoc {2}{What did we learn from multilepton analysis?}{4}{0}{2}
+\beamer@sectionintoc {3}{What's new?}{5}{0}{3}
+\beamer@sectionintoc {4}{This talk}{6}{0}{4}
+\beamer@subsectionintoc {4}{1}{\leavevmode {\color {kRed}Preliminary studies 2018}}{6}{0}{4}
+\beamer@sectionintoc {5}{Preliminary studies 2018}{7}{0}{5}
+\beamer@subsectionintoc {5}{1}{\leavevmode {\color {kRed}Expected limits}}{9}{0}{5}
+\beamer@subsectionintoc {5}{2}{\leavevmode {\color {kRed}Expected limits}}{10}{0}{5}
+\beamer@subsectionintoc {5}{3}{\leavevmode {\color {kRed}Categorization}}{11}{0}{5}
+\beamer@subsectionintoc {5}{4}{\leavevmode {\color {kRed}Expected yields}}{12}{0}{5}
+\beamer@sectionintoc {6}{Plan for signal MC central production}{13}{0}{6}
+\beamer@sectionintoc {7}{Summary}{14}{0}{7}
+\beamer@sectionintoc {9}{EXO-21-002}{16}{0}{8}
+\beamer@subsectionintoc {9}{1}{\leavevmode {\color {kRed}Model-independent selections}}{16}{0}{8}
+\beamer@subsectionintoc {9}{2}{\leavevmode {\color {kRed}Model-dependent selections}}{17}{0}{8}
+\beamer@sectionintoc {10}{EXO-21-002}{18}{0}{9}
+\beamer@subsectionintoc {10}{1}{\leavevmode {\color {kRed}Results}}{18}{0}{9}
+\beamer@sectionintoc {11}{Introduction}{19}{0}{10}
+\beamer@sectionintoc {12}{CMS and ATLAS results}{20}{0}{11}
+\beamer@subsectionintoc {12}{1}{\leavevmode {\color {kRed}LQ coupling to t-quarks}}{20}{0}{11}
+\beamer@sectionintoc {13}{Object selections}{21}{0}{12}
+\beamer@subsectionintoc {13}{1}{\leavevmode {\color {kRed}2018}}{21}{0}{12}
+\beamer@sectionintoc {14}{2T, 1T1W, 2W}{23}{0}{13}
+\beamer@subsectionintoc {14}{1}{\large \leavevmode {\color {kRed}\ensuremath {S_{\mathrm {T}}}\xspace }}{23}{0}{13}
+\beamer@sectionintoc {15}{1T0W}{24}{0}{14}
+\beamer@subsectionintoc {15}{1}{\large \leavevmode {\color {kRed}\ensuremath {S_{\mathrm {T}}}\xspace }}{24}{0}{14}
+\beamer@sectionintoc {16}{0T1W}{25}{0}{15}
+\beamer@subsectionintoc {16}{1}{\large \leavevmode {\color {kRed}\ensuremath {S_{\mathrm {T}}}\xspace }}{25}{0}{15}
+\beamer@sectionintoc {17}{0T0W}{26}{0}{16}
+\beamer@subsectionintoc {17}{1}{\large \leavevmode {\color {kRed}\ensuremath {S_{\mathrm {T}}}\xspace }}{26}{0}{16}

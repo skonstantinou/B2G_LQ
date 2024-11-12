@@ -1,0 +1,29 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author ........ : Alexandros X. Attikis
+%% Institute ..... : University of Cyprus (UCY)
+%% e-Mail ........ : attikis@cern.ch
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\footnotesize
+Muon selection criteria:\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\arraystretch}{1.0}
+\begin{table}
+  \begin{center}
+    \label{tab:muonSelection}
+    \begin{tabular}{c c l c l}
+      \hline
+      & Variable &  & Value & Description \\
+      \hline
+      % \multicolumn{5}{c}{\muonCollection}\\
+      1 & N            & $\leq$ & 0             & \muonCollection \\ 
+      2 & ID           & $==$   & 1             & \muonID \,(\VertexCollection) \\
+      3 & \pT          & $\geq$ & \muonPtCut    & \\
+      4 & $\abs{\eta}$ & $\leq$ & \muonEtaCut   & \\      
+      5 & Rel-Isol     & $\leq$ & \muonIsolationValue & \muonIsolation \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+\renewcommand{\arraystretch}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
